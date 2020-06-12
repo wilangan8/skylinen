@@ -1,0 +1,64 @@
+{
+    "sheeting":
+        [
+            {
+                "pid" : "sh-1",
+                "pname" : "Citi Fitted Sheet",
+                "pqty" : "1",
+                "pimg" : "bantal1.jpg",
+                "pminidetail" : "Vintage washed Belgian Linen.",
+                "pdetail" : "Vintage washed Belgian Linen."
+            },
+            {
+                "pid" : "sh-2",
+                "pname" : "Milano Flat Sheet",
+                "pqty" : "1",
+                "pimg" : "bantal2.jpg",
+                "pminidetail" : "100% cotton. Crisp Italian percale.",
+                "pdetail" : "100% cotton. Crisp Italian percale."
+            },
+            {
+                "pid" : "sh-3",
+                "pname" : "Studio Fitted Sheet",
+                "pqty" : "1",
+                "pimg" : "bantal1.jpg",
+                "pminidetail" : "50% cotton 50% model. Butter soft jersey.",
+                "pdetail" : "50% cotton 50% model. Butter soft jersey."
+            },
+            {
+                "pid" : "sh-4",
+                "pname" : "Studio Fitted Sheet",
+                "pqty" : "1",
+                "pimg" : "bantal2.jpg",
+                "pminidetail" : "50% cotton 50% model. Butter soft jersey.",
+                "pdetail" : "50% cotton 50% model. Butter soft jersey."
+            },
+            {
+                "pid" : "sh-5",
+                "pname" : "Nova Fitted Sheet",
+                "pqty" : "1",
+                "pimg" : "bantal1.jpg",
+                "pminidetail" : "100% cotton. Silky Italian sateen.",
+                "pdetail" : "100% cotton. Silky Italian sateen."
+            },
+            {
+                "pid" : "sh-6",
+                "pname" : "Nova Fitted Sheet",
+                "pqty" : "1",
+                "pimg" : "bantal2.jpg",
+                "pminidetail" : "100% cotton. Silky Italian sateen.",
+                "pdetail" : "100% cotton. Silky Italian sateen."
+            }
+        ],
+    "flatsheet":
+        [
+            {
+                "pid" : "fs-1",
+                "pname" : "Nova Fitted Sheet",
+                "pqty" : "1",
+                "pimg" : "bantal2.jpg",
+                "pminidetail" : "100% cotton. Silky Italian sateen.",
+                "pdetail" : "100% cotton. Silky Italian sateen."
+            }
+        ]
+}
