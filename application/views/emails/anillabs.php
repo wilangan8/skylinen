@@ -449,7 +449,7 @@
                   <tr>
                     <td class="content-cell">
                       <div class="f-fallback">
-                        <h1>Hi, Im Rizky Rabbani,</h1>
+                        <h1>Hi, Im <?= ucfirst($firstname) ?>,</h1>
                         <p>Thanks for using Skylinen. This is an invoice for your recent purchase.</p>
                         <table class="attributes" width="100%" cellpadding="0" cellspacing="0" role="presentation">
                           <tr>
@@ -467,7 +467,7 @@
                                   </td>
                                   <td class="attributes_item" width="73%">
                                     <span class="f-fallback">
-                                    chandramaulanah@gmail.com
+                                    <?= $email ?>
                                   </span>
                                   </td>
                                 </tr>
@@ -483,7 +483,7 @@
                                   </td>
                                   <td class="attributes_item" width="73%">
                                     <span class="f-fallback">
-                                    Chandra Maulana Husen
+                                    <?= ucwords(strtolower($firstname)).' '.ucwords(strtolower($lastname)) ?>
                                   </span>
                                   </td>
                                 </tr>
@@ -499,7 +499,7 @@
                                   </td>
                                   <td class="attributes_item" width="73%">
                                     <span class="f-fallback">
-                                    -
+                                    <?= $company != NULL ? $company : '-' ?>
                                   </span>
                                   </td>
                                 </tr>
@@ -515,7 +515,23 @@
                                   </td>
                                   <td class="attributes_item" width="73%">
                                     <span class="f-fallback">
-                                    +62 821-5231-6220
+                                    <?= $phone_number ?>
+                                  </span>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td class="attributes_item" width="25%">
+                                    <span class="f-fallback">
+                                    <strong>Whatsapp</strong>
+                                  </span>
+                                  <td class="attributes_item" width="2%">
+                                    <span class="f-fallback">
+                                    :
+                                  </span>
+                                  </td>
+                                  <td class="attributes_item" width="73%">
+                                    <span class="f-fallback">
+                                    <?= $wa ?>
                                   </span>
                                   </td>
                                 </tr>
@@ -531,7 +547,7 @@
                                   </td>
                                   <td class="attributes_item" width="73%">
                                     <span class="f-fallback">
-                                    Jl. Supratman No.66 A, Cihaur Geulis, Kec. Cibeunying Kaler, Kota Bandung, Jawa Barat 40122
+                                    <?= $address ?>
                                   </span>
                                   </td>
                                 </tr>
@@ -547,7 +563,7 @@
                                   </td>
                                   <td class="attributes_item" width="73%">
                                     <span class="f-fallback">
-                                    Bandung
+                                    <?= $city ?>
                                   </span>
                                   </td>
                                 </tr>
@@ -563,7 +579,7 @@
                                   </td>
                                   <td class="attributes_item" width="73%">
                                     <span class="f-fallback">
-                                    Indonesia
+                                    <?= $state ?>
                                   </span>
                                   </td>
                                 </tr>
@@ -579,7 +595,7 @@
                                   </td>
                                   <td class="attributes_item" width="73%">
                                     <span class="f-fallback">
-                                    40123
+                                    <?= $zip ?>
                                   </span>
                                   </td>
                                 </tr>
@@ -604,7 +620,7 @@
                         <table class="purchase" width="100%" cellpadding="0" cellspacing="0">
                           <tr>
                             <td>
-                              <h3>INVOICE#<?= date('Ymd') ?>-1</h3>
+                              <h3>INVOICE<?= $id ?></h3>
                             </td>
                             <td>
                               <h3 class="align-right"><?= date('l, F j Y') ?></h3>

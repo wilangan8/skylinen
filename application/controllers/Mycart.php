@@ -14,8 +14,18 @@ class Mycart extends CI_Controller {
         $get_url = file_get_contents($url);
         $data = json_decode($get_url);
  
+		$check = $this->db->order_by('invoice_id','desc')->limit(1)->get('sky_customer')->num_rows();
+		$no = $this->db->order_by('invoice_id','desc')->limit(1)->get('sky_customer')->row();
+		if($check > 0){
+			$inv_no = substr($no->invoice_id,10)+1;
+			$newNo = '#'.date('Ymd').'-'. $inv_no .'';
+		}else{
+			$newNo = '#'.date('Ymd').'-1';
+		}
+
         $data_array = array(
-            'datalist' => $data
+			'datalist' => $data,
+			'id' => $newNo,
         );
 
 		$this->load->view('checkout/head');

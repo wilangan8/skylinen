@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 11, 2020 at 04:06 PM
+-- Generation Time: Jun 13, 2020 at 03:50 PM
 -- Server version: 10.1.34-MariaDB
 -- PHP Version: 5.6.37
 
@@ -21,6 +21,34 @@ SET time_zone = "+00:00";
 --
 -- Database: `skylinen.co.id`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `sky_customer`
+--
+
+CREATE TABLE `sky_customer` (
+  `invoice_id` varchar(100) NOT NULL,
+  `email` varchar(191) NOT NULL,
+  `first_name` text NOT NULL,
+  `last_name` text NOT NULL,
+  `company` text,
+  `phone_number` int(20) NOT NULL,
+  `wa` int(20) NOT NULL,
+  `address` text NOT NULL,
+  `city` text NOT NULL,
+  `state` varchar(60) NOT NULL,
+  `zip` int(10) NOT NULL,
+  `status` enum('waiting','completed') NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `sky_customer`
+--
+
+INSERT INTO `sky_customer` (`invoice_id`, `email`, `first_name`, `last_name`, `company`, `phone_number`, `wa`, `address`, `city`, `state`, `zip`, `status`) VALUES
+('#20200613-1', 'chandramaulanah@gmail.com', 'chandra', 'husen', '-', 2147483647, 2147483647, 'Jl. Supratman No.66 A, Cihaur Geulis, Kec. Cibeunying Kaler, Kota Bandung, Jawa Barat 40122', 'Bandung', 'Indonesia', 40123, 'waiting');
 
 -- --------------------------------------------------------
 
@@ -380,7 +408,7 @@ CREATE TABLE `sky_prod_kitchenanddining` (
 INSERT INTO `sky_prod_kitchenanddining` (`id`, `name`, `product_img_1`, `product_img_2`, `product_img_3`, `mini_detail`, `full_detail`, `material_title`, `material_desc`, `origin_title`, `origin_desc`, `status`) VALUES
 ('kd-1', 'Aspen Fitted Sheet', 'bantal1.jpg', 'ASPEN-ZINC-BED-LINEN-3-0264-640x360.jpg', 'ASPEN-ZINC-FLAT-SHEET-5-0273-640x360.jpg', '100% cotton. Crisp Italian percale.', 'Pure linen adds effortless minimalist luxury to any bedroom. Above all, Citi is refreshing. Clean. Calming. Maybe that’s why it’s a customer staple.', '100% Belgian linen', 'Woven in Italy, the quality of the natural Belgian fibres is sheer bliss. We add a casual softness with a vintage treatment, then Citi only gets softer with time.', 'Handcrafted in Melbourne', 'Citi is incomparable. It’s the comforting, muted colours. It’s from being handmade in Melbourne. It’s especially soothing when it looks best without ironing.', 'yes'),
 ('kd-2', 'Milano Flat Sheet', 'bantal2.jpg', 'ASPEN-ZINC-BED-LINEN-3-0264-640x360.jpg', 'ASPEN-ZINC-FLAT-SHEET-5-0273-640x360.jpg', '100% cotton. Crisp Italian percale.', 'Pure linen adds effortless minimalist luxury to any bedroom. Above all, Citi is refreshing. Clean. Calming. Maybe that’s why it’s a customer staple.', '100% Belgian linen', 'Woven in Italy, the quality of the natural Belgian fibres is sheer bliss. We add a casual softness with a vintage treatment, then Citi only gets softer with time.', 'Handcrafted in Melbourne', 'Citi is incomparable. It’s the comforting, muted colours. It’s from being handmade in Melbourne. It’s especially soothing when it looks best without ironing.', 'yes'),
-('kd-3', 'Como Flat Sheet', 'COMO-WHITE-BED-LINEN-1-0194-1920x1080.jpg', 'COMO-WHITE-BED-LINEN-2-0201-1920x1080.jpg', 'COMO-WHITE-BED-LINEN-3-0226-1920x1080.jpg', 'Zona Nyantuy', 'We weave Como from a rarer, finer type of flax plant that Italians believe creates the world\'s best bed linen. 230 thread count Belgian linen is handmade into sheeting by us in Melbourne.', '100% Belgian linen', 'Italian-woven fabric. Unforgettably soft and light with an unusually high 230 thread count, Como is the same Italian linen that’s used in couture shirting.', 'Handcrafted in Melbourne', 'Como sets a new standard for bedtime. Gentle, breathable and utterly effortless. We make Como by hand in Melbourne, finished with a single row of hemstitch detailing.', 'yes');
+('kd-3', 'Como Flat Sheet', 'bantal2.jpg', 'COMO-WHITE-BED-LINEN-2-0201-1920x1080.jpg', 'COMO-WHITE-BED-LINEN-3-0226-1920x1080.jpg', 'ANJAY MABAR!', 'We weave Como from a rarer, finer type of flax plant that Italians believe creates the world\'s best bed linen. 230 thread count Belgian linen is handmade into sheeting by us in Melbourne.', '100% Belgian linen', 'Italian-woven fabric. Unforgettably soft and light with an unusually high 230 thread count, Como is the same Italian linen that’s used in couture shirting.', 'Handcrafted in Melbourne', 'Como sets a new standard for bedtime. Gentle, breathable and utterly effortless. We make Como by hand in Melbourne, finished with a single row of hemstitch detailing.', 'yes');
 
 -- --------------------------------------------------------
 
@@ -527,6 +555,12 @@ INSERT INTO `sky_user` (`id`, `name`, `username`, `password`, `status`, `hak`) V
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `sky_customer`
+--
+ALTER TABLE `sky_customer`
+  ADD PRIMARY KEY (`invoice_id`);
 
 --
 -- Indexes for table `sky_prod_balster`

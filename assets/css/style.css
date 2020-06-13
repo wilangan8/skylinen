@@ -11024,14 +11024,14 @@ body.menu-open #btn-main-nav {
 }
 
 .ftco-navbar-light .navbar-toggler {
-	float: left;
-    margin-top: -50px;
-    margin-left: 9px;
-	color: rgba(255, 255, 255, 0.8) !important;
-	cursor: pointer;
-	text-transform: uppercase;
-	font-size: 24px;
-	letter-spacing: .1em;
+    float: left;
+    margin-top: -44px;
+    margin-left: 1px;
+    color: rgba(255, 255, 255, 0.8) !important;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 24px;
+    letter-spacing: .1em;
 }
 
 .ftco-navbar-light .navbar-toggler:hover,
@@ -14040,34 +14040,34 @@ textarea.form-control {
 }
 
 @media (max-width:764px) {
-	.icon-chart-search {
-		float: right;
-		margin-top: -44.25px;
-		margin-right: 50px;
-		font-size: 1.1em;
-	}
-	.icon-chart-left {
-		display: none;
-		float: left;
-		margin-top: -40px;
-		margin-left: 50px;
-		font-size: 1.5em;
-	}
+    .icon-chart-search {
+        float: right;
+        margin-top: -38.25px;
+        margin-right: 50px;
+        font-size: 1.1em;
+    }
+    .icon-chart-left {
+        display: none;
+        float: left;
+        margin-top: -40px;
+        margin-left: 50px;
+        font-size: 1.5em;
+    }
 
-	.icon-back {
-		float: left;
-		margin-top: -44.25px;
-		margin-left: 6%;
-		font-size: 1.1em;
-	}
+    .icon-back {
+        float: left;
+        margin-top: -44.25px;
+        margin-left: 6%;
+        font-size: 1.1em;
+    }
 
-	.icon-chart-right {
-		float: right;
-		margin-top: -44.25px;
-		margin-right: 19px;
-		font-size: 1.1em;
-	}
-	}
+    .icon-chart-right {
+        float: right;
+        margin-top: -38.25px;
+        margin-right: 19px;
+        font-size: 1.1em;
+    }
+}
 	/*
 @media (min-width:765px){
 .icon-chart-left {
