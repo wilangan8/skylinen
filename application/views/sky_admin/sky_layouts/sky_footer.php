@@ -34,7 +34,6 @@
 <!--  Plugin for the DateTimePicker, full documentation here: https://eonasdan.github.io/bootstrap-datetimepicker/ -->
 <script src="<?= base_url('sky_main/assets/js/plugins/bootstrap-datetimepicker.min.js') ?>"></script>
 <!--  DataTables.net Plugin, full documentation here: https://datatables.net/  -->
-
 <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/1.10.21/js/dataTables.semanticui.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.js"></script>

@@ -29,9 +29,15 @@ class Kitchenanddining extends CI_Controller {
 	public function add_product($product)
 	{
 
+		$check = $this->db->order_by('id','desc')->limit(1)->get('sky_prod_kitchenanddining')->num_rows();
 		$no = $this->db->order_by('id','desc')->limit(1)->get('sky_prod_kitchenanddining')->row();
-		$newNo = substr($no->id,3)+1;
-		$id = 'kd-'. $newNo .'';
+		if($check > 0){
+			$newNo = substr($no->id,3)+1;
+			$id = 'kd-'. $newNo .'';
+		}else{
+			$id = 'kd-1';
+		}
+		
 
 		$newProduct = 'Kitchen & Dining';
 

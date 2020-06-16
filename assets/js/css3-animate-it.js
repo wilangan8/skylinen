@@ -395,21 +395,33 @@
 
 
 //CSS3 Animate-it
-$('footer').appear();
+$('.animatedParent').appear();
 
-$(document.body).on('appear', 'footer', function(e, $affected){
+$(document).on('appear', '.animatedParent', function(e, $affected){
   var ele = $(this).find('.animated');
   
-    ele.addClass('go');
-    ele.removeClass('bounceOutLeft');
+  ele.addClass('go');
   
 });
 
- $(document.body).on('disappear', 'footer', function(e, $affected) {
-  if(!$(this).hasClass('animateOnce')){
-    $(this).find('.animated').addClass('bounceOutLeft');
+ $(document).on('disappear', '.animatedParent', function(e, $affected) {
+
     $(this).find('.animated').removeClass('go');
-   }
+    
+ });
+
+
+$(document).on('appear', '.animatedParent', function(e, $affected){
+    var ele = $(this).find('.animation');
+  
+    ele.addClass('go');
+  
+});
+
+ $(document).on('disappear', '.animatedParent', function(e, $affected) {
+
+    $(this).find('.animation').removeClass('go');
+
  });
 
  $(window).load(function(){

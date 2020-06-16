@@ -6,6 +6,7 @@ class Customer extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
+		$this->load->model('m_customer');
 		$this->load->helper('url');
 		if($this->session->userdata('status') != "Logged-in"){
             redirect(base_url('sky-admin'));
@@ -13,9 +14,15 @@ class Customer extends CI_Controller {
 	}
 	public function index()
 	{
+		$waiting = array('status' => 'waiting');
+		$completed = array('status' => 'completed');
+
+		$table = 'sky_customer';
 
 		$data = array(
 			'title' => 'Customer',
+			'waiting' => $this->m_customer->check($waiting,$table)->result(),
+			'completed' => $this->m_customer->check($completed,$table)->result(),
 		);
 
 		$this->load->view('sky_admin/sky_layouts/sky_head',$data);

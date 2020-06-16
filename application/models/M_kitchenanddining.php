@@ -7,6 +7,9 @@ class M_kitchenanddining extends CI_Model {
     {
       $this->db->select("*");
       $this->db->from("sky_prod_kitchenanddining");
+      if($this->input->get('search_query')){
+        $this->db->like('name',$this->input->get('search_query'));
+    }
       if($this->uri->segment(1) == "products"){
           $this->db->where('status',"yes");
       }

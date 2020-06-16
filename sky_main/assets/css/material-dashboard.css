@@ -59,12 +59,6 @@ body {
   color: #212529;
   text-align: left;
   background-color: #fafafa;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-	-khtml-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
 }
 
 [tabindex="-1"]:focus {

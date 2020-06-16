@@ -34,33 +34,58 @@ class Bedding extends CI_Controller {
 	{
 
 		if($product == "innerduvet"){
+			$check = $this->db->order_by('id','desc')->limit(1)->get('sky_prod_innerduvet')->num_rows();
 			$no = $this->db->order_by('id','desc')->limit(1)->get('sky_prod_innerduvet')->row();
-			$newNo = substr($no->id,3)+1;
-			$id = 'id-'. $newNo .'';
+			if($check > 0){
+				$newNo = substr($no->id,3)+1;
+				$id = 'id-'. $newNo .'';
+			}else{
+				$id = 'id-1';
+			}
 
 			$newProduct = 'Inner Duvet';
 		}elseif($product == "mattressprotector"){
+			$check = $this->db->order_by('id','desc')->limit(1)->get('sky_prod_mattressprotector')->num_rows();
 			$no = $this->db->order_by('id','desc')->limit(1)->get('sky_prod_mattressprotector')->row();
-			$newNo = substr($no->id,3)+1;
-			$id = 'mp-'. $newNo .'';
+			if($check > 0){
+				$newNo = substr($no->id,3)+1;
+				$id = 'mp-'. $newNo .'';
+			}else{
+				$id = 'mp-1';
+			}
 
 			$newProduct = 'Mattress Protector';
 		}elseif($product == "pillow"){
+			$check = $this->db->order_by('id','desc')->limit(1)->get('sky_prod_pillow')->num_rows();
 			$no = $this->db->order_by('id','desc')->limit(1)->get('sky_prod_pillow')->row();
-			$newNo = substr($no->id,3)+1;
-			$id = 'pl-'. $newNo .'';
+			if($check > 0){
+				$newNo = 	substr($no->id,3)+1;
+				$id = 'pl-'. $newNo .'';
+			}else{
+				$id = 'pl-1';
+			}
 
 			$newProduct = 'Pillow';
 		}elseif($product == "balster"){
+			$check = $this->db->order_by('id','desc')->limit(1)->get('sky_prod_balster')->num_rows();
 			$no = $this->db->order_by('id','desc')->limit(1)->get('sky_prod_balster')->row();
-			$newNo = substr($no->id,3)+1;
-			$id = 'bs-'. $newNo .'';
+			if($check > 0){
+				$newNo = substr($no->id,3)+1;
+				$id = 'bs-'. $newNo .'';
+			}else{
+				$id = 'bs-1';
+			}
 
 			$newProduct = 'Balster';
 		}else{
+			$check = $this->db->order_by('id','desc')->limit(1)->get('sky_prod_cushion')->num_rows();
 			$no = $this->db->order_by('id','desc')->limit(1)->get('sky_prod_cushion')->row();
-			$newNo = substr($no->id,3)+1;
-			$id = 'ch-'. $newNo .'';
+			if($check > 0){
+				$newNo = substr($no->id,3)+1;
+				$id = 'ch-'. $newNo .'';
+			}else{
+				$id = 'ch-1';
+			}		
 
 			$newProduct = 'Cushion';
 		}

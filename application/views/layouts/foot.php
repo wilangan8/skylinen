@@ -1,11 +1,11 @@
     <footer class="ftco-footer ftco-section-content" id="about">
       <div class="container">
-        <div class="row-footer">
-          <div class="col-lg-3 col-sm-6 animated bounceInLeft d_01">
+        <div class="row-footer animatedParent">
+          <div class="col-lg-3 col-sm-6 animation animated bounceInDown d_01">
             <img src="<?= base_url('assets/images/skylinenlogo.png') ?>" class="logo-footer mb_40">
             <p class="description-footer">Copyright &copy; <script>document.write(new Date().getFullYear());</script> SkyLinen. All Rights Reserved</p>
           </div>
-          <div class="col-lg-3 col-sm-6 animated bounceInLeft d_02">
+          <div class="col-lg-3 col-sm-6 animation animated bounceInDown d_02">
             <h3 class="f-title f_600 f_size_18 mb_40">Products</h3>
               <ul class="footer_list list-unstyled">
                 <li><a href="#">Bed Linen</a></li>
@@ -14,7 +14,7 @@
                 <li><a href="#">Kitchen & Dining</a></li>
             </ul>
           </div>
-          <div class="col-lg-3 col-sm-6 animated bounceInLeft d_03">
+          <div class="col-lg-3 col-sm-6 animation animated bounceInDown d_03">
             <h3 class="f-title f_600 f_size_18 mb_40">Help?</h3>
               <ul class="footer_list list-unstyled">
                 <li><a href="#">FAQ</a></li>
@@ -22,7 +22,7 @@
                 <li><a href="#">Terms and Conditions</a></li>
               </ul>
           </div>
-          <div class="col-lg-3 col-sm-6 animated bounceInLeft d_04">
+          <div class="col-lg-3 col-sm-6 animation animated bounceInDown d_04">
             <h3 class="f-title f_600 f_size_18 mb_40">Contact Us</h3>
               <ul class="footer_list list-unstyled">
                 <li><a href="https://goo.gl/maps/79NP6NKuSCg175s66">Bandung Indah Plaza (BIP)</a></li>
@@ -37,12 +37,12 @@
     
     <a href="javascript:void(0)" class="scrolltop"><i class="ion-ios-arrow-up"></i></a>
 
-    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="<?= base_url('assets/js/jquery-3.2.1.min.js') ?>"></script>
+    <script src="<?= base_url('assets/js/jquery-migrate-3.0.1.min.js') ?>"></script>
     <script src="<?= base_url('assets/js/popper.min.js') ?>"></script>
     <script src="<?= base_url('assets/js/bootstrap.min.js') ?>"></script>
     <script src="<?= base_url('assets/js/jquery.easing.1.3.js') ?>"></script>
-    <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="<?= base_url('assets/js/slick.min.js') ?>"></script>
     <script src="<?= base_url('assets/js/jquery.waypoints.min.js') ?>"></script>
     <script src="<?= base_url('assets/js/jquery-ui.js') ?>"></script>
     <script src="<?= base_url('assets/js/jquery.stellar.min.js') ?>"></script>

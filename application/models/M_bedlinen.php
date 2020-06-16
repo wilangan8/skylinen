@@ -7,6 +7,9 @@ class M_bedlinen extends CI_Model {
     {
         $this->db->select("*");
         $this->db->from("sky_prod_sheeting");
+        if($this->input->get('search_query')){
+            $this->db->like('name',$this->input->get('search_query'));
+        }
         if($this->uri->segment(1) == "products"){
             $this->db->where('status',"yes");
         }
@@ -18,6 +21,9 @@ class M_bedlinen extends CI_Model {
     {
         $this->db->select("*");
         $this->db->from("sky_prod_flatsheet");
+        if($this->input->get('search_query')){
+            $this->db->like('name',$this->input->get('search_query'));
+        }
         if($this->uri->segment(1) == "products"){
             $this->db->where('status',"yes");
         }
@@ -29,6 +35,9 @@ class M_bedlinen extends CI_Model {
     {
         $this->db->select("*");
         $this->db->from("sky_prod_fittedsheet");
+        if($this->input->get('search_query')){
+            $this->db->like('name',$this->input->get('search_query'));
+        }
         if($this->uri->segment(1) == "products"){
             $this->db->where('status',"yes");
         }
@@ -40,6 +49,9 @@ class M_bedlinen extends CI_Model {
     {
         $this->db->select("*");
         $this->db->from("sky_prod_pillowcase");
+        if($this->input->get('search_query')){
+            $this->db->like('name',$this->input->get('search_query'));
+        }
         if($this->uri->segment(1) == "products"){
             $this->db->where('status',"yes");
         }
@@ -51,6 +63,9 @@ class M_bedlinen extends CI_Model {
     {
         $this->db->select("*");
         $this->db->from("sky_prod_balstercase");
+        if($this->input->get('search_query')){
+            $this->db->like('name',$this->input->get('search_query'));
+        }
         if($this->uri->segment(1) == "products"){
             $this->db->where('status',"yes");
         }
@@ -62,6 +77,9 @@ class M_bedlinen extends CI_Model {
     {
         $this->db->select("*");
         $this->db->from("sky_prod_duvetcover");
+        if($this->input->get('search_query')){
+            $this->db->like('name',$this->input->get('search_query'));
+        }
         if($this->uri->segment(1) == "products"){
             $this->db->where('status',"yes");
         }

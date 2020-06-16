@@ -46,7 +46,7 @@
                 <option selected>Choose ... </option>
                 
                 <?php foreach($datalist as $row):?>
-                <option><?php echo $row->name ?></option>
+                <option value="<?= $row->name ?>"><?php echo $row->name ?></option>
                 <?php endforeach; ?>
                 
               </select>

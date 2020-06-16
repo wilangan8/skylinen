@@ -1,30 +1,27 @@
-    <section class="home-slider owl-carousel overlay">
+    <section class="home-slider owl-carousel overlay animatedParent">
 
-      <div class="slider-item" style="background-image: url(<?= base_url('assets/images/sky-en-welcome.jpg') ?>);">
+      <div class="slider-item" style="background-image: url(<?= base_url('assets/images/girl.jpg') ?>);">
         <div class="container">
           <div class="row slider-text justify-content-left align-items-center" data-scrollax-parent="true">
 
-            <!-- <div class="col-md-8 col-sm-12 text-left">
-            	<span class="subheading" data-aos="fade-right" data-aos-duration="500">Welcome</span>
-              <h1 class="mb-4" data-aos="fade-right" data-aos-duration="800">Amazing Taste &amp; Beautiful Place</h1>
-              <p class="mb-4 mb-md-5" data-aos="fade-right" data-aos-duration="1000">A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-              <p><a href="#" class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3" data-aos="fade-right" data-aos-duration="1200">View Menu</a></p>
-            </div> -->
+            <div class="col-md-6 offset-md-3 text-center welcome-banner animated fadeInUpBig">
+              <h1 class="animated fadeInUpBig d_01">WELCOME!</h1>
+              <p class="animated fadeInUpBig d_02">Sky Linen - Hospitality Linen Supplier</p>
+            </div>
 
           </div>
         </div>
       </div>
 
-      <div class="slider-item" style="background-image: url(<?= base_url('assets/images/sky-en-welcome-2.jpg') ?>);">
+      <div class="slider-item" style="background-image: url(<?= base_url('assets/images/kasurbagus.jpg') ?>);">
         <div class="container">
           <div class="row slider-text justify-content-left align-items-center" data-scrollax-parent="true">
 
-            <!-- <div class="col-md-8 col-sm-12 text-left">
-            	<span class="subheading" data-aos="fade-right" data-aos-duration="500">Exceptional Linen Sheet</span>
-              <h1 class="mb-4" data-aos="fade-right" data-aos-duration="800">The Best Coffee Testing Experience</h1>
-              <p class="mb-4 mb-md-5" data-aos="fade-right" data-aos-duration="1000">A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-              <p><a href="#" class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3" data-aos="fade-right" data-aos-duration="1200">View Menu</a></p>
-            </div> -->
+          
+            <div class="col-md-6 offset-md-3 text-center welcome-banner animated fadeInUpBig">
+              <h1 class="animated fadeInUpBig d_01">Selamat Datang</h1>
+              <p class="animated fadeInUpBig d_02">Sky Linen - Hospitality Linen Supplier</p>
+            </div>
 
           </div>
         </div>

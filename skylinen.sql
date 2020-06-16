@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 13, 2020 at 03:50 PM
+-- Generation Time: Jun 16, 2020 at 08:36 AM
 -- Server version: 10.1.34-MariaDB
 -- PHP Version: 5.6.37
 
@@ -34,8 +34,8 @@ CREATE TABLE `sky_customer` (
   `first_name` text NOT NULL,
   `last_name` text NOT NULL,
   `company` text,
-  `phone_number` int(20) NOT NULL,
-  `wa` int(20) NOT NULL,
+  `phone_number` varchar(20) NOT NULL,
+  `wa` varchar(20) NOT NULL,
   `address` text NOT NULL,
   `city` text NOT NULL,
   `state` varchar(60) NOT NULL,
@@ -48,7 +48,9 @@ CREATE TABLE `sky_customer` (
 --
 
 INSERT INTO `sky_customer` (`invoice_id`, `email`, `first_name`, `last_name`, `company`, `phone_number`, `wa`, `address`, `city`, `state`, `zip`, `status`) VALUES
-('#20200613-1', 'chandramaulanah@gmail.com', 'chandra', 'husen', '-', 2147483647, 2147483647, 'Jl. Supratman No.66 A, Cihaur Geulis, Kec. Cibeunying Kaler, Kota Bandung, Jawa Barat 40122', 'Bandung', 'Indonesia', 40123, 'waiting');
+('#20200613-1', 'chandramaulanah@gmail.com', 'chandra', 'maulana husen', '-', '+62 821-0321-3212', '+62 821-0321-3212', 'Jl. Supratman No.66 A, Cihaur Geulis, Kec. Cibeunying Kaler, Kota Bandung, Jawa Barat 40122', 'Bandung', 'Indonesia', 40123, 'waiting'),
+('#20200613-2', 'chandramaulanah@gmail.com', 'chandra', 'husen', '-', '+62 821-0321-3212', '+62 821-0321-3212', 'Jl. Supratman No.66 A, Cihaur Geulis, Kec. Cibeunying Kaler, Kota Bandung, Jawa Barat 40122', 'Bandung', 'Indonesia', 40123, 'waiting'),
+('#20200613-3', 'chandramaulanah@gmail.com', 'chandra', 'husen', '-', '+62 821-0321-3212', '+62 821-0321-3212', 'Jl. Supratman No.66 A, Cihaur Geulis, Kec. Cibeunying Kaler, Kota Bandung, Jawa Barat 40122', 'Bandung', 'Indonesia', 40123, 'completed');
 
 -- --------------------------------------------------------
 

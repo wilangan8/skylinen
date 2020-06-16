@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet">
 
     <link rel="stylesheet" href="<?= base_url('assets/css/open-iconic-bootstrap.min.css') ?>">
-    <link rel="stylesheet" href="<?= base_url('assets/') ?>css/animate.css">
+    <link rel="stylesheet" href="<?= base_url('assets/css/animate.css') ?>">
     
     <link rel="stylesheet" href="<?= base_url('assets/css/owl.carousel.min.css') ?>">
     <link rel="stylesheet" href="<?= base_url('assets/css/owl.theme.default.min.css') ?>">
@@ -85,8 +85,8 @@
               <i class="icon-close btn-close-search"></i>
               <div class="section-search-bar">
                 <h6>WHAT ARE YOU LOOKING FOR?</h6>
-                <form class="form-search">
-                  <input autofocus="" name="query" ngmodel="" placeholder="Quilt Covers" type="text" class="">
+                <form class="form-search" action="<?= base_url('products') ?>" method="get">
+                  <input name="search_query" autocomplete="off" placeholder="Quilt Covers" type="text">
                   <button class="btn btn-black" type="submit">Search</button>
                 </form>
               </div>

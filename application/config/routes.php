@@ -60,6 +60,8 @@ $route['sky-admin/logout'] = "sky-admin/auth/logout";
 $route['products/kitchen-and-dining'] = "products/kitchenanddining";
 $route['products/kitchen-and-dining/detail/(:any)'] = "products/kitchenanddining/detail/$1";
 
+$route['products'] = "/";
+
 $route['sky-admin/products/kitchen-and-dining'] = "sky-admin/products/kitchenanddining";
 $route['sky-admin/products/kitchen-and-dining/add-product'] = "sky-admin/products/kitchenanddining/add-product/kitchenanddining";
 $route['sky-admin/products/kitchen-and-dining/add-product-post'] = "sky-admin/products/kitchenanddining/add-product-post/kitchenanddining";

@@ -7,6 +7,9 @@ class M_bathroom extends CI_Model {
     {
         $this->db->select("*");
         $this->db->from("sky_prod_bathtowel");
+        if($this->input->get('search_query')){
+            $this->db->like('name',$this->input->get('search_query'));
+        }
         if($this->uri->segment(1) == "products"){
             $this->db->where('status',"yes");
         }
@@ -18,6 +21,9 @@ class M_bathroom extends CI_Model {
     {
         $this->db->select("*");
         $this->db->from("sky_prod_handtowel");
+        if($this->input->get('search_query')){
+            $this->db->like('name',$this->input->get('search_query'));
+        }
         if($this->uri->segment(1) == "products"){
             $this->db->where('status',"yes");
         }
@@ -29,6 +35,9 @@ class M_bathroom extends CI_Model {
     {
         $this->db->select("*");
         $this->db->from("sky_prod_facetowel");
+        if($this->input->get('search_query')){
+            $this->db->like('name',$this->input->get('search_query'));
+        }
         if($this->uri->segment(1) == "products"){
             $this->db->where('status',"yes");
         }
@@ -40,6 +49,9 @@ class M_bathroom extends CI_Model {
     {
         $this->db->select("*");
         $this->db->from("sky_prod_bathmat");
+        if($this->input->get('search_query')){
+            $this->db->like('name',$this->input->get('search_query'));
+        }
         if($this->uri->segment(1) == "products"){
             $this->db->where('status',"yes");
         }

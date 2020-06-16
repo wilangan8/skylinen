@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet">
 
     <link rel="stylesheet" href="<?= base_url('assets/css/open-iconic-bootstrap.min.css') ?>">
-    <link rel="stylesheet" href="<?= base_url('assets/') ?>css/animate.css">
+    <link rel="stylesheet" href="<?= base_url('assets/css/animate.css') ?>">
     
     <link rel="stylesheet" href="<?= base_url('assets/css/owl.carousel.min.css') ?>">
     <link rel="stylesheet" href="<?= base_url('assets/css/owl.theme.default.min.css') ?>">
@@ -27,6 +27,7 @@
     
     <link rel="stylesheet" href="<?= base_url('assets/css/flaticon.css') ?>">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="<?= base_url('assets/css/select2.min.css') ?>">
     <link rel="stylesheet" href="<?= base_url('assets/css/icomoon.css') ?>">
     <link rel="stylesheet" href="<?= base_url('assets/css/style.css') ?>">
   </head>

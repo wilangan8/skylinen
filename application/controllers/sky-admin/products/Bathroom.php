@@ -33,27 +33,51 @@ class Bathroom extends CI_Controller {
 	{
 
 		if($product == "bathtowel"){
+			$check = $this->db->order_by('id','desc')->limit(1)->get('sky_prod_bathtowel')->num_rows();
 			$no = $this->db->order_by('id','desc')->limit(1)->get('sky_prod_bathtowel')->row();
-			$newNo = substr($no->id,3)+1;
-			$id = 'bt-'. $newNo .'';
+			if($check > 0){
+				$newNo = substr($no->id,3)+1;
+				$id = 'bt-'. $newNo .'';
+			}else{
+				$id = 'bt-1';
+			}
+			
 
 			$newProduct = 'Bath Towel';
 		}elseif($product == "handtowel"){
+			$check = $this->db->order_by('id','desc')->limit(1)->get('sky_prod_handtowel')->num_rows();
 			$no = $this->db->order_by('id','desc')->limit(1)->get('sky_prod_handtowel')->row();
-			$newNo = substr($no->id,3)+1;
-			$id = 'ht-'. $newNo .'';
+			if($check > 0){
+				$newNo = substr($no->id,3)+1;
+				$id = 'ht-'. $newNo .'';
+			}else{
+				$id = 'ht-1';
+			}
+			
 
 			$newProduct = 'Hand Towel';
 		}elseif($product == "facetowel"){
+			$check = $this->db->order_by('id','desc')->limit(1)->get('sky_prod_facetowel')->num_rows();
 			$no = $this->db->order_by('id','desc')->limit(1)->get('sky_prod_facetowel')->row();
-			$newNo = substr($no->id,3)+1;
-			$id = 'ft-'. $newNo .'';
+			if($check > 0){
+				$newNo = substr($no->id,3)+1;
+				$id = 'ft-'. $newNo .'';
+			}else{
+				$id = 'ft-1';
+			}
+			
 
 			$newProduct = 'Face Towel';
 		}else{
+			$check = $this->db->order_by('id','desc')->limit(1)->get('sky_prod_bathmat')->num_rows();
 			$no = $this->db->order_by('id','desc')->limit(1)->get('sky_prod_bathmat')->row();
-			$newNo = substr($no->id,3)+1;
-			$id = 'bm-'. $newNo .'';
+			if($check > 0){
+				$newNo = substr($no->id,3)+1;
+				$id = 'bm-'. $newNo .'';
+			}else{
+				$id = 'bm-1';
+			}
+			
 
 			$newProduct = 'Bathmat';
 		}

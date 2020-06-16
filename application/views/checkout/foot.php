@@ -16,6 +16,7 @@
     <script src="<?= base_url('assets/js/main.js') ?>"></script>
     <script src="<?= base_url('assets/js/css3-animate-it.js') ?>"></script>
     <script src="<?= base_url('assets/js/wow.min.js') ?>"></script>
+    <script src="<?= base_url('assets/js/select2.min.js') ?>"></script>
     <script>new WOW().init();</script>
     <script>var base_url = '<?php echo base_url() ?>';</script>
     <?php if(count($this->cart->contents()) == 0){ ?>

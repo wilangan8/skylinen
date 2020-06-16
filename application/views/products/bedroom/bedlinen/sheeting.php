@@ -1,4 +1,4 @@
-    <section class="ftco-section">
+    <section class="ftco-section-title">
             <img src="<?= base_url('assets/images/sheetingabode.jpg') ?>" class="col-lg-12 content-image" style="max-height:inherit;">
     </section>
 

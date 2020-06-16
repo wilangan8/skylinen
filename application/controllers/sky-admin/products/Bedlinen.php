@@ -36,39 +36,69 @@ class Bedlinen extends CI_Controller {
 	{
 
 		if($product == "sheeting"){
+			$check = $this->db->order_by('id','desc')->limit(1)->get('sky_prod_sheeting')->num_rows();
 			$no = $this->db->order_by('id','desc')->limit(1)->get('sky_prod_sheeting')->row();
-			$newNo = substr($no->id,3)+1;
-			$id = 'sh-'. $newNo .'';
+			if($check > 0){
+				$newNo = substr($no->id,3)+1;
+				$id = 'sh-'. $newNo .'';
+			}else{
+				$id = 'sh-1';
+			}
 
 			$newProduct = 'Sheeting';
 		}elseif($product == "flatsheet"){
+			$check = $this->db->order_by('id','desc')->limit(1)->get('sky_prod_flatsheet')->num_rows();
 			$no = $this->db->order_by('id','desc')->limit(1)->get('sky_prod_flatsheet')->row();
-			$newNo = substr($no->id,3)+1;
-			$id = 'fs-'. $newNo .'';
+			if($check > 0){
+				$newNo = substr($no->id,3)+1;
+				$id = 'fs-'. $newNo .'';
+			}else{
+				$id = 'fs-1';
+			}
 
 			$newProduct = 'Flat Sheet';
 		}elseif($product == "fittedsheet"){
-			$no = $this->db->order_by('id','desc')->limit(1)->get('sky_prod_fittedsheet')->row();
-			$newNo = substr($no->id,4)+1;
-			$id = 'fts-'. $newNo .'';
+			$check = $this->db->order_by('id','desc')->limit(1)->get('sky_prod_fittedsheet')->num_rows();
+			$no = $this->db->order_by('id','desc')->limit(1)->get('sky_prod_fittedsheet')->row();			if($check > 0){
+				$id = 'fts-'. $newNo .'';
+				$newNo = substr($no->id,4)+1;
+
+			}else{
+				$id = 'fts-1';
+			}
 
 			$newProduct = 'Fitted Sheet';
 		}elseif($product == "pillowcase"){
+			$check = $this->db->order_by('id','desc')->limit(1)->get('sky_prod_pillowcase')->num_rows();
 			$no = $this->db->order_by('id','desc')->limit(1)->get('sky_prod_pillowcase')->row();
-			$newNo = substr($no->id,3)+1;
-			$id = 'pc-'. $newNo .'';
+			if($check > 0){
+				$newNo = substr($no->id,3)+1;
+				$id = 'pc-'. $newNo .'';
+			}else{
+				$id = 'pc-1';
+			}
 
 			$newProduct = 'Pillow Case';
 		}elseif($product == "balstercase"){
+			$check = $this->db->order_by('id','desc')->limit(1)->get('sky_prod_balstercase')->num_rows();
 			$no = $this->db->order_by('id','desc')->limit(1)->get('sky_prod_balstercase')->row();
-			$newNo = substr($no->id,3)+1;
-			$id = 'bc-'. $newNo .'';
+			if($check > 0){
+				$newNo = substr($no->id,3)+1;
+				$id = 'bc-'. $newNo .'';
+			}else{
+				$id = 'bc-1';
+			}
 
 			$newProduct = 'Balster Case';
 		}else{
+			$check = $this->db->order_by('id','desc')->limit(1)->get('sky_prod_duvetcover')->num_rows();
 			$no = $this->db->order_by('id','desc')->limit(1)->get('sky_prod_duvetcover')->row();
-			$newNo = substr($no->id,3)+1;
-			$id = 'dc-'. $newNo .'';
+			if($check > 0){
+				$newNo = substr($no->id,3)+1;
+				$id = 'dc-'. $newNo .'';
+			}else{
+				$id = 'dc-1';
+			}
 
 			$newProduct = 'Duvet Cover';
 		}
