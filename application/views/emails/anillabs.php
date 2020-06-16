@@ -429,7 +429,7 @@
   <![endif]-->
   </head>
   <body>
-    <span class="preheader">This is an INVOICE#<?= date('Ymd') ?>-1 for your purchase on <?= date('l, F j Y') ?>.</span>
+    <span class="preheader">This is an INVOICE#<?= $id ?> for your purchase on <?= date('l, F j Y') ?>.</span>
     <table class="email-wrapper" width="100%" cellpadding="0" cellspacing="0" role="presentation">
       <tr>
         <td align="center">
@@ -620,27 +620,35 @@
                         <table class="purchase" width="100%" cellpadding="0" cellspacing="0">
                           <tr>
                             <td>
-                              <h3>INVOICE<?= $id ?></h3>
+                              <h3>INVOICE#<?= $id ?></h3>
                             </td>
                             <td>
                               <h3 class="align-right"><?= date('l, F j Y') ?></h3>
                             </td>
                           </tr>
                           <tr>
-                            <td colspan="2">
+                            <td colspan="4">
                               <table class="purchase_content" width="100%" cellpadding="0" cellspacing="0">
                                 <tr>
-                                  <th class="purchase_heading" align="left">
-                                    <p class="f-fallback">Description</p>
+                                  <th class="purchase_heading">
+                                    <p class="f-fallback">#</p>
                                   </th>
-                                  <th class="purchase_heading" align="right">
+                                  <th class="purchase_heading">
+                                    <p class="f-fallback">Product</p>
+                                  </th>
+                                  <th class="purchase_heading">
+                                    <p class="f-fallback">Image</p>
+                                  </th>
+                                  <th class="purchase_heading">
                                     <p class="f-fallback">Amount</p>
                                   </th>
                                 </tr>
                                 <?php foreach ($this->cart->contents() as $items): ?>
                                 <tr>
-                                  <td width="80%" class="purchase_item"><span class="f-fallback"><?= $items['name'] ?></span></td>
-                                  <td class="align-right" width="20%" class="purchase_item"><span class="f-fallback"><?= $items['qty'] ?></span></td>
+                                  <td width="10%" class="purchase_item align-center"><span class="f-fallback"><?= $items['id'] ?></span></td>
+                                  <td width="40%" class="purchase_item align-center"><span class="f-fallback"><?= $items['name'] ?></span></td>
+                                  <td width="40%" class="purchase_item align-center"><span class="f-fallback"><img src="<?= $items['img'] ?>" width="150"></span></td>
+                                  <td width="10%" class="purchase_item align-center"><span class="f-fallback"><?= $items['qty'] ?></span></td>
                                 </tr>
                                 <?php endforeach; ?>
                               </table>

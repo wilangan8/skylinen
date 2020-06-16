@@ -28,7 +28,7 @@
                       <a href="javascript:;" class="btn btn-success float-right"><i class="material-icons">get_app</i> Xls</a>
                       <a href="javascript:;" class="btn btn-danger float-right"><i class="material-icons">get_app</i> Pdf</a>
                       <div class="table-responsive">
-                        <table class="table table-hover datatable" id="kitchenanddining-table">
+                        <table class="table table-hover display responsive nowrap" width="100%" id="kitchenanddining-table">
                           <thead class="text-primary">
                             <tr>
                               <th>#</th>
@@ -53,7 +53,7 @@
                               </td>
                               <td>
                               <a href="<?= base_url('sky-admin/products/kitchen-and-dining/edit-product/'. $row->id .'') ?>"><i class="material-icons text-warning">edit</i></a>
-                                <a class="delete" id="<?= $row->id ?>"><i class="material-icons text-danger">delete</i></a>
+                                <a href="#" class="delete" id="<?= $row->id ?>"><i class="material-icons text-danger">delete</i></a>
                               </td>
                             </tr>
                             <?php } }else{ ?>

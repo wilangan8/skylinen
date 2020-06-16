@@ -53,7 +53,7 @@
                       <a href="javascript:;" class="btn btn-success float-right"><i class="material-icons">get_app</i> Xls</a>
                       <a href="javascript:;" class="btn btn-danger float-right"><i class="material-icons">get_app</i> Pdf</a>
                       <div class="table-responsive">
-                        <table class="table table-hover datatable" id="innerduvet-table">
+                        <table class="table table-hover display responsive nowrap" width="100%" id="innerduvet-table">
                           <thead class="text-primary">
                             <tr>
                               <th>#</th>
@@ -94,7 +94,7 @@
                       <a href="javascript:;" class="btn btn-success float-right"><i class="material-icons">get_app</i> Xls</a>
                       <a href="javascript:;" class="btn btn-danger float-right"><i class="material-icons">get_app</i> Pdf</a>
                       <div class="table-responsive">
-                        <table class="table table-hover datatable" id="mattressprotector-table">
+                        <table class="table table-hover display responsive nowrap" width="100%" id="mattressprotector-table">
                           <thead class="text-primary">
                             <tr>
                               <th>#</th>
@@ -135,7 +135,7 @@
                       <a href="javascript:;" class="btn btn-success float-right"><i class="material-icons">get_app</i> Xls</a>
                       <a href="javascript:;" class="btn btn-danger float-right"><i class="material-icons">get_app</i> Pdf</a>
                       <div class="table-responsive">
-                        <table class="table table-hover datatable" id="pillow-table">
+                        <table class="table table-hover display responsive nowrap" width="100%" id="pillow-table">
                           <thead class="text-primary">
                             <tr>
                               <th>#</th>
@@ -176,7 +176,7 @@
                       <a href="javascript:;" class="btn btn-success float-right"><i class="material-icons">get_app</i> Xls</a>
                       <a href="javascript:;" class="btn btn-danger float-right"><i class="material-icons">get_app</i> Pdf</a>
                       <div class="table-responsive">
-                        <table class="table table-hover datatable" id="balster-table">
+                        <table class="table table-hover display responsive nowrap" width="100%" id="balster-table">
                           <thead class="text-primary">
                             <tr>
                               <th>#</th>
@@ -217,7 +217,7 @@
                       <a href="javascript:;" class="btn btn-success float-right"><i class="material-icons">get_app</i> Xls</a>
                       <a href="javascript:;" class="btn btn-danger float-right"><i class="material-icons">get_app</i> Pdf</a>
                       <div class="table-responsive">
-                        <table class="table table-hover datatable" id="cushion-table">
+                        <table class="table table-hover display responsive nowrap" width="100%" id="cushion-table">
                           <thead class="text-primary">
                             <tr>
                               <th>#</th>

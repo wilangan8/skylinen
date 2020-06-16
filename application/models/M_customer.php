@@ -23,8 +23,4 @@ class M_customer extends CI_Model {
     	$this->db->delete($table);
         return $this->db->query();
     }
-    
-    public function detail_product($where,$table){		
-        return $this->db->get_where($table,$where);
-    }
 }

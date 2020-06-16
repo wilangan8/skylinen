@@ -1,6 +1,6 @@
         <footer class="footer">
             <div class="container-fluid">
-                <nav class="float-left">
+                <nav class="float-left center-938">
                     <ul>
                         <li>
                             <a href="<?= base_url() ?>" target="_blank">
@@ -33,6 +33,8 @@
 <script src="<?= base_url('sky_main/assets/js/plugins/bootstrap-selectpicker.js') ?>"></script>
 <!--  Plugin for the DateTimePicker, full documentation here: https://eonasdan.github.io/bootstrap-datetimepicker/ -->
 <script src="<?= base_url('sky_main/assets/js/plugins/bootstrap-datetimepicker.min.js') ?>"></script>
+<!-- Sweet Alert Js -->
+<script src="<?= base_url('sky_main/assets/js/sweetalert.min.js') ?>"></script>
 <!--  DataTables.net Plugin, full documentation here: https://datatables.net/  -->
 <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/1.10.21/js/dataTables.semanticui.min.js"></script>
@@ -82,29 +84,73 @@ $(document).ready(function() {
         $('#handtowel-table').DataTable();
         $('#facetowel-table').DataTable();
         $('#bathmat-table').DataTable();
+    <?php }else if($this->uri->segment(2) == "customer"){ ?>
+        $('#waiting-table').DataTable();
+        $('#completed-table').DataTable();
     <?php }else{ ?>
         $('#kitchenanddining-table').DataTable();
     <?php } ?>
-} );
 
-$(document).ready(function(){
-    $(".delete").click(function(e){
-        e.preventDefault(); 
-            $.ajax({
-                type: "POST",
-                url: "<?= base_url('sky-admin/products/'. $this->uri->segment(3) .'/delete') ?>",
-                cache: false,
-                data: {id:$(this).attr("id")},
-                success: function(reaksi) {
-                if (reaksi){
-                alert("Success");
-                } else {
-                alert("ERROR");
-                }
+    $('body').on('click', '.delete', function (event) {
+        var id = $(this).attr('id');
+        event.preventDefault();
+        swal({
+        title: "Are You Sure ?",
+        text: "Data with id "+id+" cannot be restored if deleted!",
+        icon: "error",
+        buttons: true,
+        dangerMode: true,
+        confirmButtonText: "Yes, delete it!",
+        closeOnConfirm: false,
+        })
+        .then((willDelete) => {
+            if (willDelete) {
+                console.log(willDelete);
+                $.ajax({
+                    type: "POST",
+                    url: "<?= base_url('sky-admin/products/'. $this->uri->segment(3) .'/delete') ?>",
+                    cache: false,
+                    data: {id:id},
+                    success: function(delected) {
+                        if (delected){
+                            swal("Your row has been deleted.", {
+                                buttons: false,
+                                icon: "success",
+                                title: "Deleted!",
+                            });
+                            window.setTimeout(function(){
+
+                            window.location.href = "<?= base_url('sky-admin/products/'. $this->uri->segment(3) .'') ?>";
+
+                            }, 3000);
+                        }
+                    }
+                });
             }
         });
     });
 });
+</script>
+<script>
+    $('body').on('click', '.complete-it', function (event) {
+        var id = $(this).attr('id');
+        event.preventDefault();
+        swal({
+            title: "Do you want to complete this order ?",
+            text: "This order will be moved to the completed order list!",
+            icon: "warning",
+            buttons: true,
+            dangerMode: true,
+            confirmButtonText: "Yes, delete it!",
+            closeOnConfirm: false,
+        })
+        .then((willEdit) => {
+            if (willEdit) {
+                console.log(willEdit);
+                window.location = "<?= base_url('sky-admin/customer/complete-it/') ?>"+id+"";
+            }
+        });
+    });
 </script>
 </body>
 

@@ -36,7 +36,7 @@ class Auth extends CI_Controller {
 				if($data->status == '1'){
 
 					$data_session = array(
-						'name' => $username,
+						'name' => $data->name,
 						'status' => "Logged-in"
 						);
 		

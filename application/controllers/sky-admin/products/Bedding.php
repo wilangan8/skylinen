@@ -38,9 +38,9 @@ class Bedding extends CI_Controller {
 			$no = $this->db->order_by('id','desc')->limit(1)->get('sky_prod_innerduvet')->row();
 			if($check > 0){
 				$newNo = substr($no->id,3)+1;
-				$id = 'id-'. $newNo .'';
+				$id = 'id-'. sprintf("%04s", $newNo) .'';
 			}else{
-				$id = 'id-1';
+				$id = 'id-0001';
 			}
 
 			$newProduct = 'Inner Duvet';
@@ -49,9 +49,9 @@ class Bedding extends CI_Controller {
 			$no = $this->db->order_by('id','desc')->limit(1)->get('sky_prod_mattressprotector')->row();
 			if($check > 0){
 				$newNo = substr($no->id,3)+1;
-				$id = 'mp-'. $newNo .'';
+				$id = 'mp-'. sprintf("%04s", $newNo) .'';
 			}else{
-				$id = 'mp-1';
+				$id = 'mp-0001';
 			}
 
 			$newProduct = 'Mattress Protector';
@@ -60,9 +60,9 @@ class Bedding extends CI_Controller {
 			$no = $this->db->order_by('id','desc')->limit(1)->get('sky_prod_pillow')->row();
 			if($check > 0){
 				$newNo = 	substr($no->id,3)+1;
-				$id = 'pl-'. $newNo .'';
+				$id = 'pl-'. sprintf("%04s", $newNo) .'';
 			}else{
-				$id = 'pl-1';
+				$id = 'pl-0001';
 			}
 
 			$newProduct = 'Pillow';
@@ -71,9 +71,9 @@ class Bedding extends CI_Controller {
 			$no = $this->db->order_by('id','desc')->limit(1)->get('sky_prod_balster')->row();
 			if($check > 0){
 				$newNo = substr($no->id,3)+1;
-				$id = 'bs-'. $newNo .'';
+				$id = 'bs-'. sprintf("%04s", $newNo) .'';
 			}else{
-				$id = 'bs-1';
+				$id = 'bs-0001';
 			}
 
 			$newProduct = 'Balster';
@@ -82,9 +82,9 @@ class Bedding extends CI_Controller {
 			$no = $this->db->order_by('id','desc')->limit(1)->get('sky_prod_cushion')->row();
 			if($check > 0){
 				$newNo = substr($no->id,3)+1;
-				$id = 'ch-'. $newNo .'';
+				$id = 'ch-'. sprintf("%04s", $newNo) .'';
 			}else{
-				$id = 'ch-1';
+				$id = 'ch-0001';
 			}		
 
 			$newProduct = 'Cushion';

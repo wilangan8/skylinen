@@ -40,9 +40,9 @@ class Bedlinen extends CI_Controller {
 			$no = $this->db->order_by('id','desc')->limit(1)->get('sky_prod_sheeting')->row();
 			if($check > 0){
 				$newNo = substr($no->id,3)+1;
-				$id = 'sh-'. $newNo .'';
+				$id = 'sh-'. sprintf("%04s", $newNo) .'';
 			}else{
-				$id = 'sh-1';
+				$id = 'sh-0001';
 			}
 
 			$newProduct = 'Sheeting';
@@ -51,20 +51,19 @@ class Bedlinen extends CI_Controller {
 			$no = $this->db->order_by('id','desc')->limit(1)->get('sky_prod_flatsheet')->row();
 			if($check > 0){
 				$newNo = substr($no->id,3)+1;
-				$id = 'fs-'. $newNo .'';
+				$id = 'fs-'. sprintf("%04s", $newNo) .'';
 			}else{
-				$id = 'fs-1';
+				$id = 'fs-0001';
 			}
 
 			$newProduct = 'Flat Sheet';
 		}elseif($product == "fittedsheet"){
 			$check = $this->db->order_by('id','desc')->limit(1)->get('sky_prod_fittedsheet')->num_rows();
 			$no = $this->db->order_by('id','desc')->limit(1)->get('sky_prod_fittedsheet')->row();			if($check > 0){
-				$id = 'fts-'. $newNo .'';
 				$newNo = substr($no->id,4)+1;
-
+				$id = 'fts-'. sprintf("%04s", $newNo) .'';
 			}else{
-				$id = 'fts-1';
+				$id = 'fts-0001';
 			}
 
 			$newProduct = 'Fitted Sheet';
@@ -73,9 +72,9 @@ class Bedlinen extends CI_Controller {
 			$no = $this->db->order_by('id','desc')->limit(1)->get('sky_prod_pillowcase')->row();
 			if($check > 0){
 				$newNo = substr($no->id,3)+1;
-				$id = 'pc-'. $newNo .'';
+				$id = 'pc-'. sprintf("%04s", $newNo) .'';
 			}else{
-				$id = 'pc-1';
+				$id = 'pc-0001';
 			}
 
 			$newProduct = 'Pillow Case';
@@ -84,9 +83,9 @@ class Bedlinen extends CI_Controller {
 			$no = $this->db->order_by('id','desc')->limit(1)->get('sky_prod_balstercase')->row();
 			if($check > 0){
 				$newNo = substr($no->id,3)+1;
-				$id = 'bc-'. $newNo .'';
+				$id = 'bc-'. sprintf("%04s", $newNo) .'';
 			}else{
-				$id = 'bc-1';
+				$id = 'bc-0001';
 			}
 
 			$newProduct = 'Balster Case';
@@ -95,9 +94,9 @@ class Bedlinen extends CI_Controller {
 			$no = $this->db->order_by('id','desc')->limit(1)->get('sky_prod_duvetcover')->row();
 			if($check > 0){
 				$newNo = substr($no->id,3)+1;
-				$id = 'dc-'. $newNo .'';
+				$id = 'dc-'. sprintf("%04s", $newNo) .'';
 			}else{
-				$id = 'dc-1';
+				$id = 'dc-0001';
 			}
 
 			$newProduct = 'Duvet Cover';

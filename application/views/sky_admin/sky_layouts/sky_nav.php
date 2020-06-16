@@ -1,4 +1,4 @@
-<div class="sidebar" data-color="grey" data-background-color="azure" data-image="<?= base_url('sky_main/assets/img/sidebar-1.jpg') ?>">
+<div class="sidebar" data-color="grey" data-background-color="azure" data-image="<?= base_url('sky_main/assets/img/city-profile.jpg') ?>">
     <div class="logo">
         <a href="<?= base_url('sky-admin/dashboard') ?>" class="simple-text logo-normal">
             Skylinen

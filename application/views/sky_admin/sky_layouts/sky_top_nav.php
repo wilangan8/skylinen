@@ -14,7 +14,7 @@
             <div class="collapse navbar-collapse justify-content-end">
                 <div class="navbar-form"></div>
                 <ul class="navbar-nav">
-                    <li class="nav-item">
+                    <li class="nav-item <?= $this->uri->segment(2) == 'customer' ? 'active' : '' ?>">
                         <a class="nav-link" href="<?= base_url('sky-admin/customer') ?>">
                             <i class="material-icons">people</i>
                                 <p class="d-lg-none d-md-block">

@@ -14,7 +14,7 @@
     <div class="container-fluid">
 
     <div class="row">
-        <div class="col-md-8">
+        <div class="col-md-12">
             <div class="card">
                 <div class="card-header card-header-<?= $color ?>">
                     <h4 class="card-title"><?= $title ?></h4>
@@ -43,7 +43,7 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-md-12">
+                            <div class="col-md-12" style="padding-left:15px;padding-right:15px">
                                 <div class="form-group">
                                     <label class="bmd-label-floating">Full Detail Product</label>
                                     <textarea autocomplete="off" class="form-control" rows="5" name="full_detail" required></textarea>

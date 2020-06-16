@@ -28,7 +28,63 @@
                   </div>
                   <div class="stats">
                     <i class="material-icons text-primary">info</i>
-                    <a href="javascript:;">Info</a>
+                    <a data-toggle="modal" data-target="#detail-bedlinen" href="#">Info</a>
+
+                    <div class="modal animated zoomIn" id="detail-bedlinen">
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h4 class="modal-title">Detail Bedlinen</h4>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            <div class="row">
+                              <div class="col-md-12">
+                                <div class="table-responsive">
+                                  <table class="table table-bordered">
+                                    <thead>
+                                      <tr>
+                                        <th>Category</th>
+                                        <th class="text-center">Quantity/Product</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td>Sheeting</td>
+                                        <td class="text-center"><?= $sheeting ?></td>
+                                      </tr>
+                                      <tr>
+                                        <td>Flat Sheet</td>
+                                        <td class="text-center"><?= $flatsheet ?></td>
+                                      </tr>
+                                      <tr>
+                                        <td>Fitted Sheet</td>
+                                        <td class="text-center"><?= $fittedsheet ?></td>
+                                      </tr>
+                                      <tr>
+                                        <td>Pillow Case</td>
+                                        <td class="text-center"><?= $pillowcase ?></td>
+                                      </tr>
+                                      <tr>
+                                        <td>Balster Case</td>
+                                        <td class="text-center"><?= $balstercase ?></td>
+                                      </tr>
+                                      <tr>
+                                        <td>Duvet Cover</td>
+                                        <td class="text-center"><?= $duvetcover ?></td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
                   </div>
                 </div>
               </div>
@@ -58,7 +114,59 @@
                   </div>
                   <div class="stats">
                     <i class="material-icons text-success">info</i>
-                    <a href="javascript:;">Info</a>
+                    <a data-toggle="modal" data-target="#detail-bedding" href="#">Info</a>
+
+                    <div class="modal animated zoomIn" id="detail-bedding">
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h4 class="modal-title">Detail Bedding</h4>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            <div class="row">
+                              <div class="col-md-12">
+                                <div class="table-responsive">
+                                  <table class="table table-bordered">
+                                    <thead>
+                                      <tr>
+                                        <th>Category</th>
+                                        <th class="text-center">Quantity/Product</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td>Inner Duvet</td>
+                                        <td class="text-center"><?= $innerduvet ?></td>
+                                      </tr>
+                                      <tr>
+                                        <td>Mattress Protector</td>
+                                        <td class="text-center"><?= $mattressprotector ?></td>
+                                      </tr>
+                                      <tr>
+                                        <td>Pillow</td>
+                                        <td class="text-center"><?= $pillow ?></td>
+                                      </tr>
+                                      <tr>
+                                        <td>Balster</td>
+                                        <td class="text-center"><?= $balster ?></td>
+                                      </tr>
+                                      <tr>
+                                        <td>Cushion</td>
+                                        <td class="text-center"><?= $cushion ?></td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
                   </div>
                 </div>
               </div>
@@ -87,7 +195,55 @@
                   </div>
                   <div class="stats">
                     <i class="material-icons text-info">info</i>
-                    <a href="javascript:;">Info</a>
+                    <a data-toggle="modal" data-target="#detail-bathroom" href="#">Info</a>
+
+                    <div class="modal animated zoomIn" id="detail-bathroom">
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h4 class="modal-title">Detail Bathroom</h4>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            <div class="row">
+                              <div class="col-md-12">
+                                <div class="table-responsive">
+                                  <table class="table table-bordered">
+                                    <thead>
+                                      <tr>
+                                        <th>Category</th>
+                                        <th class="text-center">Quantity/Product</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td>Bath Towel</td>
+                                        <td class="text-center"><?= $bathtowel ?></td>
+                                      </tr>
+                                      <tr>
+                                        <td>Hand Towel</td>
+                                        <td class="text-center"><?= $handtowel ?></td>
+                                      </tr>
+                                      <tr>
+                                        <td>Face Towel</td>
+                                        <td class="text-center"><?= $facetowel ?></td>
+                                      </tr>
+                                      <tr>
+                                        <td>Bathmat</td>
+                                        <td class="text-center"><?= $bathmat ?></td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
                   </div>
                 </div>
               </div>
@@ -107,10 +263,6 @@
                   <div class="stats">
                     <i class="material-icons text-warning">add</i>
                     <a href="<?= base_url('sky-admin/products/kitchen-and-dining/add-product') ?>">Add New Product...</a>
-                  </div>
-                  <div class="stats">
-                    <i class="material-icons text-warning">info</i>
-                    <a href="javascript:;">Info</a>
                   </div>
                 </div>
               </div>

@@ -37,9 +37,9 @@ class Bathroom extends CI_Controller {
 			$no = $this->db->order_by('id','desc')->limit(1)->get('sky_prod_bathtowel')->row();
 			if($check > 0){
 				$newNo = substr($no->id,3)+1;
-				$id = 'bt-'. $newNo .'';
+				$id = 'bt-'. sprintf("%04s", $newNo) .'';
 			}else{
-				$id = 'bt-1';
+				$id = 'bt-0001';
 			}
 			
 
@@ -49,9 +49,9 @@ class Bathroom extends CI_Controller {
 			$no = $this->db->order_by('id','desc')->limit(1)->get('sky_prod_handtowel')->row();
 			if($check > 0){
 				$newNo = substr($no->id,3)+1;
-				$id = 'ht-'. $newNo .'';
+				$id = 'ht-'. sprintf("%04s", $newNo) .'';
 			}else{
-				$id = 'ht-1';
+				$id = 'ht-0001';
 			}
 			
 
@@ -61,9 +61,9 @@ class Bathroom extends CI_Controller {
 			$no = $this->db->order_by('id','desc')->limit(1)->get('sky_prod_facetowel')->row();
 			if($check > 0){
 				$newNo = substr($no->id,3)+1;
-				$id = 'ft-'. $newNo .'';
+				$id = 'ft-'. sprintf("%04s", $newNo) .'';
 			}else{
-				$id = 'ft-1';
+				$id = 'ft-0001';
 			}
 			
 
@@ -73,9 +73,9 @@ class Bathroom extends CI_Controller {
 			$no = $this->db->order_by('id','desc')->limit(1)->get('sky_prod_bathmat')->row();
 			if($check > 0){
 				$newNo = substr($no->id,3)+1;
-				$id = 'bm-'. $newNo .'';
+				$id = 'bm-'. sprintf("%04s", $newNo) .'';
 			}else{
-				$id = 'bm-1';
+				$id = 'bm-0001';
 			}
 			
 

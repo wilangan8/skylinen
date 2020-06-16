@@ -12,6 +12,7 @@
     <script src="<?= base_url('assets/js/jquery.animateNumber.min.js') ?>"></script>
     <script src="<?= base_url('assets/js/bootstrap-datepicker.js') ?>"></script>
     <script src="<?= base_url('assets/js/jquery.timepicker.min.js') ?>"></script>
+  <script src="<?= base_url('sky_main/assets/js/sweetalert.min.js') ?>"></script>
     <script src="<?= base_url('assets/js/scrollax.min.js') ?>"></script>
     <script src="<?= base_url('assets/js/main.js') ?>"></script>
     <script src="<?= base_url('assets/js/css3-animate-it.js') ?>"></script>
@@ -104,7 +105,15 @@
 
       });
   </script>
-
+  <?php if (isset($message)){?>
+    <script>
+      swal("<?= $message ?>", {
+          buttons: false,
+          icon: "success",
+          title: "Sended to Skylinen Team",
+      });
+    </script>
+  <?php } ?>
     
   </body>
 </html>

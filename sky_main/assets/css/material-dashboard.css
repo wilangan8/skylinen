@@ -1029,6 +1029,14 @@ pre code {
   margin-right: auto;
   margin-left: auto;
 }
+@media only screen and (max-width: 938px){
+  .content .container-fluid {
+    padding: 0;
+  }
+  .content .container-fluid .row .col-md-12 {
+    padding: 0;
+  }
+}
 
 .row {
   display: flex;
@@ -13831,6 +13839,7 @@ fieldset[disabled] .form-group .form-control {
 .navbar .navbar-wrapper {
   display: inline-flex;
   align-items: center;
+  max-width: 150px;
 }
 
 .navbar .navbar-brand {
@@ -15621,6 +15630,11 @@ fieldset[disabled] .form-group.is-focused .togglebutton label {
   margin-top: 70px;
   padding: 30px 15px;
   min-height: calc(100vh - 123px);
+}
+@media only screen and (max-width: 938px){
+  .main-panel>.content {
+    padding: 0;
+  }
 }
 
 .main-panel>.footer {
@@ -19805,6 +19819,13 @@ Copyright (c) 2015 Daniel Eden
     display: none !important;
   }
 
+}
+
+@media (max-width:938px){
+  .center-938{
+    float: none !important;
+    text-align: center !important;
+  }
 }
 
 /*# sourceMappingURL=material-dashboard.css.map */

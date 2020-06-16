@@ -47,7 +47,7 @@
                       <a href="javascript:;" class="btn btn-success float-right"><i class="material-icons">get_app</i> Xls</a>
                       <a href="javascript:;" class="btn btn-danger float-right"><i class="material-icons">get_app</i> Pdf</a>
                       <div class="table-responsive">
-                        <table class="table table-hover datatable" id="bathtowel-table">
+                        <table class="table table-hover display responsive nowrap" width="100%" id="bathtowel-table">
                           <thead class="text-primary">
                             <tr>
                               <th>#</th>
@@ -72,7 +72,7 @@
                               </td>
                               <td>
                                 <a href="<?= base_url('sky-admin/products/bathroom/edit-product/'. $row->id .'') ?>"><i class="material-icons text-warning">edit</i></a>
-                                <a class="delete" id="<?= $row->id ?>"><i class="material-icons text-danger">delete</i></a>
+                                <a href="#" class="delete" id="<?= $row->id ?>"><i class="material-icons text-danger">delete</i></a>
                               </td>
                             </tr>
                             <?php } }else{ ?>
@@ -88,7 +88,7 @@
                       <a href="javascript:;" class="btn btn-success float-right"><i class="material-icons">get_app</i> Xls</a>
                       <a href="javascript:;" class="btn btn-danger float-right"><i class="material-icons">get_app</i> Pdf</a>
                       <div class="table-responsive">
-                        <table class="table table-hover datatable" id="handtowel-table">
+                        <table class="table table-hover display responsive nowrap" width="100%" id="handtowel-table">
                           <thead class="text-primary">
                             <tr>
                               <th>#</th>
@@ -113,7 +113,7 @@
                               </td>
                               <td>
                                 <a href="<?= base_url('sky-admin/products/bathroom/edit-product/'. $row->id .'') ?>"><i class="material-icons text-warning">edit</i></a>
-                                <a class="delete" id="<?= $row->id ?>"><i class="material-icons text-danger">delete</i></a>
+                                <a href="#" class="delete" id="<?= $row->id ?>"><i class="material-icons text-danger">delete</i></a>
                               </td>
                             </tr>
                             <?php } }else{ ?>
@@ -129,7 +129,7 @@
                       <a href="javascript:;" class="btn btn-success float-right"><i class="material-icons">get_app</i> Xls</a>
                       <a href="javascript:;" class="btn btn-danger float-right"><i class="material-icons">get_app</i> Pdf</a>
                       <div class="table-responsive">
-                        <table class="table table-hover datatable" id="facetowel-table">
+                        <table class="table table-hover display responsive nowrap" width="100%" id="facetowel-table">
                           <thead class="text-primary">
                             <tr>
                               <th>#</th>
@@ -154,7 +154,7 @@
                               </td>
                               <td>
                                 <a href="<?= base_url('sky-admin/products/bathroom/edit-product/'. $row->id .'') ?>"><i class="material-icons text-warning">edit</i></a>
-                                <a class="delete" id="<?= $row->id ?>"><i class="material-icons text-danger">delete</i></a>
+                                <a href="#" class="delete" id="<?= $row->id ?>"><i class="material-icons text-danger">delete</i></a>
                               </td>
                             </tr>
                             <?php } }else{ ?>
@@ -170,7 +170,7 @@
                       <a href="javascript:;" class="btn btn-success float-right"><i class="material-icons">get_app</i> Xls</a>
                       <a href="javascript:;" class="btn btn-danger float-right"><i class="material-icons">get_app</i> Pdf</a>
                       <div class="table-responsive">
-                        <table class="table table-hover datatable" id="bathmat-table">
+                        <table class="table table-hover display responsive nowrap" width="100%" id="bathmat-table">
                           <thead class="text-primary">
                             <tr>
                               <th>#</th>
@@ -195,7 +195,7 @@
                               </td>
                               <td>
                                 <a href="<?= base_url('sky-admin/products/bathroom/edit-product/'. $row->id .'') ?>"><i class="material-icons text-warning">edit</i></a>
-                                <a class="delete" id="<?= $row->id ?>"><i class="material-icons text-danger">delete</i></a>
+                                <a href="#" class="delete" id="<?= $row->id ?>"><i class="material-icons text-danger">delete</i></a>
                               </td>
                             </tr>
                             <?php } }else{ ?>

@@ -9,7 +9,7 @@ class M_kitchenanddining extends CI_Model {
       $this->db->from("sky_prod_kitchenanddining");
       if($this->input->get('search_query')){
         $this->db->like('name',$this->input->get('search_query'));
-    }
+      }
       if($this->uri->segment(1) == "products"){
           $this->db->where('status',"yes");
       }
@@ -29,11 +29,13 @@ class M_kitchenanddining extends CI_Model {
     public function update_product($where,$data,$table){
 		$this->db->where($where);
 		$this->db->update($table,$data);
-	}
+	  }
 
-    public function delete_product($where,$table){
-		$this->db->where($where);
-		$this->db->delete($table);
+    public function delete_product($where,$table)
+    {
+    $this->db->where($where);
+      $this->db->delete($table);
+        return $this->db->query();
     }
     
     public function detail_product($where,$table){		

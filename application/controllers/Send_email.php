@@ -33,7 +33,7 @@ class Send_email extends CI_Controller {
         $this->email->from($this->input->post('email'), "Linen's");
 
         // Email penerima
-        $this->email->to('hallo@skylinen.co.id'); // Ganti dengan email tujuan 
+        $this->email->to('gancetsquad@gmail.com'); // Ganti dengan email tujuan 
 
         // Lampiran email, isi dengan url/path file
         // $this->email->attach('https://masrud.com/content/images/20181215150137-codeigniter-smtp-gmail.png');
@@ -61,7 +61,6 @@ class Send_email extends CI_Controller {
 
         // Tampilkan pesan sukses atau error
         if ($this->email->send()) {
-            // $this->cart->destroy();
             $data_cust = array(
                 'invoice_id' => $this->input->post('id'),
                 'email' => $this->input->post('email'),
@@ -77,12 +76,30 @@ class Send_email extends CI_Controller {
                 'status' => 'waiting'
             );
             $insert = $this->m_customer->create($data_cust,'sky_customer');
-            echo 'Sukses! email berhasil dikirim.';
+
+            $this->cart->destroy();
+            
+            $this->session->set_flashdata('message', 'Wait for an answer from our team via email');
+            redirect(base_url('mycart'));
         } else {
-            echo 'Error! email tidak dapat dikirim.';
+            alert("Error,Email tidak terkirim!");
         }
     }
     public function view() {
+        $data = array(
+            'id' => $this->input->post('id'),
+            'email' => $this->input->post('email'),
+            'firstname'=> $this->input->post('firstname'),
+            'lastname' => $this->input->post('lastname'),
+            'company' => $this->input->post('company'),
+            'phone_number' => $this->input->post('phone_number'),
+            'wa' => $this->input->post('wa'),
+            'address' => $this->input->post('address'),
+            'city' => $this->input->post('city'),
+            'state' => $this->input->post('state'),
+            'zip' => $this->input->post('zip'),
+        );
+        
         $this->load->view('emails/anillabs',$data);
     }
 }

@@ -46,6 +46,12 @@ body{
 form{
 	width: 360px;
 }
+@media screen and (max-width:900px){
+	form{
+		width: 100%;
+	}
+}
+
 
 .login-content img{
     height: 100px;
@@ -189,9 +195,6 @@ a:hover{
 }
 
 @media screen and (max-width: 1000px){
-	form{
-		width: 290px;
-	}
 
 	.login-content h2{
         font-size: 2.4rem;

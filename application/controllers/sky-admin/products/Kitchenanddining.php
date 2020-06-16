@@ -33,7 +33,7 @@ class Kitchenanddining extends CI_Controller {
 		$no = $this->db->order_by('id','desc')->limit(1)->get('sky_prod_kitchenanddining')->row();
 		if($check > 0){
 			$newNo = substr($no->id,3)+1;
-			$id = 'kd-'. $newNo .'';
+			$id = 'kd-'. sprintf("%04s", $newNo) .'';
 		}else{
 			$id = 'kd-1';
 		}
@@ -223,5 +223,6 @@ class Kitchenanddining extends CI_Controller {
 		} else {
 			echo false;
 		}
+		
 	}
 }

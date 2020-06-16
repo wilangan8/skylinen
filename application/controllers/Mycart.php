@@ -17,10 +17,10 @@ class Mycart extends CI_Controller {
 		$check = $this->db->order_by('invoice_id','desc')->limit(1)->get('sky_customer')->num_rows();
 		$no = $this->db->order_by('invoice_id','desc')->limit(1)->get('sky_customer')->row();
 		if($check > 0){
-			$inv_no = substr($no->invoice_id,10)+1;
-			$newNo = '#'.date('Ymd').'-'. $inv_no .'';
+			$inv_no = substr($no->invoice_id,9)+1;
+			$newNo = date('Ymd').'-'. sprintf("%06s", $inv_no) .'';
 		}else{
-			$newNo = '#'.date('Ymd').'-1';
+			$newNo = date('Ymd').'-000001';
 		}
 
         $data_array = array(
@@ -106,6 +106,7 @@ class Mycart extends CI_Controller {
 	public function show_mini_cart()
 	{
 		$output = '';
+
 		if(count($this->cart->contents()) > 0){
 			$output .= '
 							<div class="cart-list">
@@ -116,9 +117,9 @@ class Mycart extends CI_Controller {
 									<div class="cart-item">
 										<div class="cart-item-product">
 											
-											<a class="cart-item-image ng-star-inserted" href="#" style="background: url('.$items['img'].');"></a>
+											<a class="cart-item-image ng-star-inserted" style="background: url('.$items['img'].');"></a>
 											<div class="cart-item-title">
-											<a href="#">
+											<a>
 												<h2>'.$items['name'].'</h2>
 											</a>
 											<h4 class="ng-star-inserted">Size - single</h4>
