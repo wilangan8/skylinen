@@ -9,7 +9,7 @@
                         </li>
                     </ul>
                 </nav>
-                <div class="copyright float-right">
+                <div class="copyright float-right center-938">
                     Copyright  &copy; <?= date('Y') ?> SkyLinen. All Rights Reserved
                 </div>
             </div>
@@ -87,6 +87,9 @@ $(document).ready(function() {
     <?php }else if($this->uri->segment(2) == "customer"){ ?>
         $('#waiting-table').DataTable();
         $('#completed-table').DataTable();
+    <?php }else if($this->uri->segment(2) == "settings"){ ?>
+        $('#masteradmin-table').DataTable();
+        $('#loginlog-table').DataTable();
     <?php }else{ ?>
         $('#kitchenanddining-table').DataTable();
     <?php } ?>
@@ -152,6 +155,47 @@ $(document).ready(function() {
         });
     });
 </script>
+<script>
+    $('body').on('click', '.delete-admin', function (event) {
+        var id = $(this).attr('id');
+        event.preventDefault();
+        swal({
+        title: "Are You Sure ?",
+        text: "Data with id "+id+" cannot be restored if deleted!",
+        icon: "error",
+        buttons: true,
+        dangerMode: true,
+        confirmButtonText: "Yes, delete it!",
+        closeOnConfirm: false,
+        })
+        .then((willDelete) => {
+            if (willDelete) {
+                console.log(willDelete);
+                $.ajax({
+                    type: "POST",
+                    url: "<?= base_url('sky-admin/settings/delete-admin/') ?>"+id+"",
+                    cache: false,
+                    data: {id:id},
+                    success: function(delected) {
+                        if (delected){
+                            swal("Your row has been deleted.", {
+                                buttons: false,
+                                icon: "success",
+                                title: "Deleted!",
+                            });
+                            window.setTimeout(function(){
+
+                            window.location.href = "<?= base_url('sky-admin/settings') ?>";
+
+                            }, 3000);
+                        }
+                    }
+                });
+            }
+        });
+    });
+</script>
+<?= $this->session->flashdata('message') ?>
 </body>
 
 </html>

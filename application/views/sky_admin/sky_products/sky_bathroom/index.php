@@ -8,7 +8,6 @@
                 <div class="card-header card-header-tabs card-header-info">
                   <div class="nav-tabs-navigation">
                     <div class="nav-tabs-wrapper">
-                      <span class="nav-tabs-title">Products:</span>
                       <ul class="nav nav-tabs" data-tabs="tabs">
                         <li class="nav-item">
                           <a class="nav-link active show" href="#bathtowel" data-toggle="tab">

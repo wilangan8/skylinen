@@ -105,15 +105,9 @@
 
       });
   </script>
-  <?php if (isset($message)){?>
-    <script>
-      swal("<?= $message ?>", {
-          buttons: false,
-          icon: "success",
-          title: "Sended to Skylinen Team",
-      });
-    </script>
-  <?php } ?>
+  <?= $this->session->flashdata('cart_empty') ?>
+  <?= $this->session->flashdata('email_success') ?>
+  <?= $this->session->flashdata('email_error') ?>
     
   </body>
 </html>

@@ -60,29 +60,64 @@ class Send_email extends CI_Controller {
         $this->email->message($body);
 
         // Tampilkan pesan sukses atau error
-        if ($this->email->send()) {
-            $data_cust = array(
-                'invoice_id' => $this->input->post('id'),
-                'email' => $this->input->post('email'),
-                'first_name'=> $this->input->post('firstname'),
-                'last_name' => $this->input->post('lastname'),
-                'company' => $this->input->post('company'),
-                'phone_number' => $this->input->post('phone_number'),
-                'wa' => $this->input->post('wa'),
-                'address' => $this->input->post('address'),
-                'city' => $this->input->post('city'),
-                'state' => $this->input->post('state'),
-                'zip' => $this->input->post('zip'),
-                'status' => 'waiting'
-            );
-            $insert = $this->m_customer->create($data_cust,'sky_customer');
+        if(count($this->cart->contents()) > 0){
+            if ($this->email->send()) {
+                $data_cust = array(
+                    'invoice_id' => $this->input->post('id'),
+                    'email' => $this->input->post('email'),
+                    'first_name'=> $this->input->post('firstname'),
+                    'last_name' => $this->input->post('lastname'),
+                    'company' => $this->input->post('company'),
+                    'phone_number' => $this->input->post('phone_number'),
+                    'wa' => $this->input->post('wa'),
+                    'address' => $this->input->post('address'),
+                    'city' => $this->input->post('city'),
+                    'state' => $this->input->post('state'),
+                    'zip' => $this->input->post('zip'),
+                    'status' => 'waiting'
+                );
+                $insert = $this->m_customer->create($data_cust,'sky_customer');
 
-            $this->cart->destroy();
-            
-            $this->session->set_flashdata('message', 'Wait for an answer from our team via email');
+                $this->cart->destroy();
+                
+                $this->session->set_flashdata('email_success', '    <script>
+                                                                        swal("Wait for an answer from our team via email", {
+                                                                            icon: "success",
+                                                                            title: "Sended to Skylinen Team",
+                                                                            button: {
+                                                                            text: "Ok, I wil wait :)",
+                                                                            value: true,
+                                                                            visible: true,
+                                                                            className: "",
+                                                                            closeModal: true
+                                                                            }
+                                                                        });
+                                                                    </script>');
+                redirect(base_url('mycart'));
+            } else {
+                $this->session->set_flashdata('email_error', '  <script>
+                                                                    swal("Oh sorry, Your email was not sent properly", {
+                                                                        icon: "error",
+                                                                        title: "Email failed to send",
+                                                                        button: {
+                                                                        value: true,
+                                                                        visible: true,
+                                                                        className: "",
+                                                                        closeModal: true,
+                                                                        text: "Try Again Later !",
+                                                                        }
+                                                                    });
+                                                                </script>');
+                redirect(base_url('mycart'));
+            }
+        }else{
+            $this->session->set_flashdata('cart_empty', '   <script>
+                                                                swal("Put in the cart of products that you want", {
+                                                                    icon: "error",
+                                                                    title: "Cart Is Empty !!!",
+                                                                });
+                                                            </script>');
             redirect(base_url('mycart'));
-        } else {
-            alert("Error,Email tidak terkirim!");
         }
     }
     public function view() {

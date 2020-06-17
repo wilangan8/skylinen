@@ -15,13 +15,13 @@
 	<img class="wave" src="<?= base_url('sky_main/assets/img/login/wave.png') ?>">
 	<div class="container">
 		<div class="img">
-			<img src="<?= base_url('sky_main/assets/img/login/bg_mobile.svg') ?>">
+			<img src="<?= base_url('sky_main/assets/img/login/bg_mobile_2.svg') ?>">
 		</div>
 		<div class="login-content">
-			<form action="<?= base_url('sky-admin/login') ?>" method="post">
+			<form action="<?= base_url('sky-admin/reset-status-post') ?>" method="post">
 				<img src="<?= base_url('sky_main/assets/img/login/avatar_male.svg') ?>">
-				<h2 class="title">Welcome</h2>
-				<?= $this->session->flashdata('message'); ?>
+				<h2 class="title">Reset Status</h2>
+                <?= $this->session->flashdata('message'); ?>
            		<div class="input-div one">
            		   <div class="i">
            		   		<i class="fas fa-user"></i>
@@ -40,8 +40,8 @@
            		    	<input type="password" name="password" class="input" autocomplete="off" required>
             	   </div>
             	</div>
-            	<a href="<?= base_url('sky-admin/reset-status') ?>">Reset Status</a>
-            	<input type="submit" class="btn" value="Login">
+            	<a href="<?= base_url('sky-admin') ?>"><- Back</a>
+            	<input type="submit" class="btn" value="Reset">
             </form>
         </div>
     </div>

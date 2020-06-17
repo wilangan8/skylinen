@@ -57,6 +57,11 @@ $route['sky-admin'] = "sky-admin/auth";
 $route['sky-admin/login'] = "sky-admin/auth/postlogin";
 $route['sky-admin/logout'] = "sky-admin/auth/logout";
 
+$route['sky-admin/reset-status'] = "sky-admin/auth/reset-status";
+$route['sky-admin/reset-status-post'] = "sky-admin/auth/reset-status-post";
+
+$route['sky-admin/settings/master-admin/add-admin'] = "sky-admin/settings/add-admin";
+
 $route['products/kitchen-and-dining'] = "products/kitchenanddining";
 $route['products/kitchen-and-dining/detail/(:any)'] = "products/kitchenanddining/detail/$1";
 

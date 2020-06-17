@@ -8,7 +8,6 @@
                 <div class="card-header card-header-tabs card-header-info">
                   <div class="nav-tabs-navigation">
                     <div class="nav-tabs-wrapper">
-                      <span class="nav-tabs-title">Products:</span>
                       <ul class="nav nav-tabs" data-tabs="tabs">
                         <li class="nav-item">
                           <a class="nav-link active show" href="#waiting" data-toggle="tab">
@@ -133,7 +132,7 @@
                               </div>
                             </div>
                             <?php } }else{ ?>
-                            <tr><td colspan="5" class="text-center">No product(s) found...</td></tr>
+                            <tr><td colspan="5" class="text-center">No Customer(s) found...</td></tr>
                             <?php } ?>
                           </tbody>
                         </table>
@@ -244,7 +243,7 @@
                               </div>
                             </div>
                             <?php } }else{ ?>
-                            <tr><td colspan="5" class="text-center">No product(s) found...</td></tr>
+                            <tr><td colspan="5" class="text-center">No Customer(s) found...</td></tr>
                             <?php } ?>
                           </tbody>
                         </table>

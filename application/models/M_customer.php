@@ -13,9 +13,9 @@ class M_customer extends CI_Model {
     }
 
     public function update($where,$data,$table){
-		$this->db->where($where);
-		$this->db->update($table,$data);
-	}	
+      $this->db->where($where);
+      $this->db->update($table,$data);
+	  }	
 
     public function delete($where,$table)
     {
@@ -23,4 +23,5 @@ class M_customer extends CI_Model {
     	$this->db->delete($table);
         return $this->db->query();
     }
+    
 }
