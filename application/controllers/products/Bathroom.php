@@ -44,11 +44,11 @@ class Bathroom extends CI_Controller {
 
   public function detail($id)
 	{
-		if(substr($id,0,2) == "bt"){
+		if(substr($id,0,2) == "BT"){
 			$prod = "bathtowel";
-		}elseif(substr($id,0,2) == "ht"){
+		}elseif(substr($id,0,2) == "HT"){
 			$prod = "handtowel";
-		}elseif(substr($id,0,2) == "ft"){
+		}elseif(substr($id,0,2) == "FT"){
 			$prod = "facetowel";
 		}else{
 			$prod = "bathmat";

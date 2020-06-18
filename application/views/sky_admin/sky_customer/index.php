@@ -29,8 +29,8 @@
                   <div class="tab-content">
 
                     <div class="tab-pane active show" id="waiting">
-                      <a href="javascript:;" class="btn btn-success float-right"><i class="material-icons">get_app</i> Xls</a>
-                      <a href="javascript:;" class="btn btn-danger float-right"><i class="material-icons">get_app</i> Pdf</a>
+                      <a href="<?= base_url('export/customer_all_xls') ?>" target="_blank" class="btn btn-success float-right"><i class="material-icons">get_app</i> Xls</a>
+                      <a href="<?= base_url('export/customer_all_pdf') ?>" target="_blank" class="btn btn-danger float-right"><i class="material-icons">get_app</i> Pdf</a>
                       <div class="table-responsive">
                         <table class="table table-hover display responsive nowrap" id="waiting-table">
                           <thead class="text-primary">
@@ -127,6 +127,13 @@
                                       </div>
                                     </div>
 
+                                    <div class="row">
+                                      <div class="col-md-12" style="padding-left:15px;padding-right:15px">
+                                        <label for="products">Products ID List</label>
+                                        <textarea class="form-control" rows="4" name="products" readonly><?= $row->products ?></textarea>
+                                      </div>
+                                    </div>
+
                                   </div>
                                 </div>
                               </div>
@@ -140,8 +147,8 @@
                     </div>
 
                     <div class="tab-pane" id="completed">
-                      <a href="javascript:;" class="btn btn-success float-right"><i class="material-icons">get_app</i> Xls</a>
-                      <a href="javascript:;" class="btn btn-danger float-right"><i class="material-icons">get_app</i> Pdf</a>
+                      <a href="<?= base_url('export/customer_all_xls') ?>" target="_blank" class="btn btn-success float-right"><i class="material-icons">get_app</i> Xls</a>
+                      <a href="<?= base_url('export/customer_all_pdf') ?>" target="_blank" class="btn btn-danger float-right"><i class="material-icons">get_app</i> Pdf</a>
                       <div class="table-responsive">
                         <table class="table table-hover display responsive nowrap" width="100%" id="completed-table">
                           <thead class="text-primary">
@@ -235,6 +242,13 @@
                                       <div class="col-md-4">
                                         <label for="zip">Zip</label>
                                         <input type="text" name="zip" value="<?= $row->zip ?>" class="form-control" readonly>
+                                      </div>
+                                    </div>
+
+                                    <div class="row">
+                                      <div class="col-md-12" style="padding-left:15px;padding-right:15px">
+                                        <label for="products">Products ID List</label>
+                                        <textarea class="form-control" rows="4" name="products" readonly><?= $row->products ?></textarea>
                                       </div>
                                     </div>
 

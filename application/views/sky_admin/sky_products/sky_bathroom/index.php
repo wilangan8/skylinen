@@ -42,9 +42,6 @@
 
                     <div class="tab-pane active show" id="bathtowel">
                       <a href="<?= base_url('sky-admin/products/bathroom/add-product/bathtowel') ?>" class="btn btn-info btn-round"><i class="material-icons">add</i></a>
-
-                      <a href="javascript:;" class="btn btn-success float-right"><i class="material-icons">get_app</i> Xls</a>
-                      <a href="javascript:;" class="btn btn-danger float-right"><i class="material-icons">get_app</i> Pdf</a>
                       <div class="table-responsive">
                         <table class="table table-hover display responsive nowrap" width="100%" id="bathtowel-table">
                           <thead class="text-primary">
@@ -83,9 +80,6 @@
                     </div>
                     <div class="tab-pane" id="handtowel">
                       <a href="<?= base_url('sky-admin/products/bathroom/add-product/handtowel') ?>" class="btn btn-info btn-round"><i class="material-icons">add</i></a>
-
-                      <a href="javascript:;" class="btn btn-success float-right"><i class="material-icons">get_app</i> Xls</a>
-                      <a href="javascript:;" class="btn btn-danger float-right"><i class="material-icons">get_app</i> Pdf</a>
                       <div class="table-responsive">
                         <table class="table table-hover display responsive nowrap" width="100%" id="handtowel-table">
                           <thead class="text-primary">
@@ -124,9 +118,6 @@
                     </div>
                     <div class="tab-pane" id="facetowel">
                       <a href="<?= base_url('sky-admin/products/bathroom/add-product/facetowel') ?>" class="btn btn-info btn-round"><i class="material-icons">add</i></a>
-
-                      <a href="javascript:;" class="btn btn-success float-right"><i class="material-icons">get_app</i> Xls</a>
-                      <a href="javascript:;" class="btn btn-danger float-right"><i class="material-icons">get_app</i> Pdf</a>
                       <div class="table-responsive">
                         <table class="table table-hover display responsive nowrap" width="100%" id="facetowel-table">
                           <thead class="text-primary">
@@ -165,9 +156,6 @@
                     </div>
                     <div class="tab-pane" id="bathmat">
                       <a href="<?= base_url('sky-admin/products/bathroom/add-product/bathmat') ?>" class="btn btn-info btn-round"><i class="material-icons">add</i></a>
-
-                      <a href="javascript:;" class="btn btn-success float-right"><i class="material-icons">get_app</i> Xls</a>
-                      <a href="javascript:;" class="btn btn-danger float-right"><i class="material-icons">get_app</i> Pdf</a>
                       <div class="table-responsive">
                         <table class="table table-hover display responsive nowrap" width="100%" id="bathmat-table">
                           <thead class="text-primary">

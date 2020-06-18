@@ -48,9 +48,6 @@
 
                     <div class="tab-pane active show" id="innerduvet">
                       <a href="<?= base_url('sky-admin/products/bedding/add-product/innerduvet') ?>" class="btn btn-info btn-round"><i class="material-icons">add</i></a>
-
-                      <a href="javascript:;" class="btn btn-success float-right"><i class="material-icons">get_app</i> Xls</a>
-                      <a href="javascript:;" class="btn btn-danger float-right"><i class="material-icons">get_app</i> Pdf</a>
                       <div class="table-responsive">
                         <table class="table table-hover display responsive nowrap" width="100%" id="innerduvet-table">
                           <thead class="text-primary">
@@ -77,7 +74,7 @@
                               </td>
                               <td>
                                 <a href="<?= base_url('sky-admin/products/bedding/edit-product/'. $row->id .'') ?>"><i class="material-icons text-warning">edit</i></a>
-                                <a class="delete" id="<?= $row->id ?>"><i class="material-icons text-danger">delete</i></a>
+                                <a href="#" class="delete" id="<?= $row->id ?>"><i class="material-icons text-danger">delete</i></a>
                               </td>
                             </tr>
                             <?php } }else{ ?>
@@ -89,9 +86,6 @@
                     </div>
                     <div class="tab-pane" id="mattressprotector">
                       <a href="<?= base_url('sky-admin/products/bedding/add-product/mattressprotector') ?>" class="btn btn-info btn-round"><i class="material-icons">add</i></a>
-
-                      <a href="javascript:;" class="btn btn-success float-right"><i class="material-icons">get_app</i> Xls</a>
-                      <a href="javascript:;" class="btn btn-danger float-right"><i class="material-icons">get_app</i> Pdf</a>
                       <div class="table-responsive">
                         <table class="table table-hover display responsive nowrap" width="100%" id="mattressprotector-table">
                           <thead class="text-primary">
@@ -118,7 +112,7 @@
                               </td>
                               <td>
                                 <a href="<?= base_url('sky-admin/products/bedding/edit-product/'. $row->id .'') ?>"><i class="material-icons text-warning">edit</i></a>
-                                <a class="delete" id="<?= $row->id ?>"><i class="material-icons text-danger">delete</i></a>
+                                <a href="#" class="delete" id="<?= $row->id ?>"><i class="material-icons text-danger">delete</i></a>
                               </td>
                             </tr>
                             <?php } }else{ ?>
@@ -130,9 +124,6 @@
                     </div>
                     <div class="tab-pane" id="pillow">
                       <a href="<?= base_url('sky-admin/products/bedding/add-product/pillow') ?>" class="btn btn-info btn-round"><i class="material-icons">add</i></a>
-
-                      <a href="javascript:;" class="btn btn-success float-right"><i class="material-icons">get_app</i> Xls</a>
-                      <a href="javascript:;" class="btn btn-danger float-right"><i class="material-icons">get_app</i> Pdf</a>
                       <div class="table-responsive">
                         <table class="table table-hover display responsive nowrap" width="100%" id="pillow-table">
                           <thead class="text-primary">
@@ -159,7 +150,7 @@
                               </td>
                               <td>
                                 <a href="<?= base_url('sky-admin/products/bedding/edit-product/'. $row->id .'') ?>"><i class="material-icons text-warning">edit</i></a>
-                                <a class="delete" id="<?= $row->id ?>"><i class="material-icons text-danger">delete</i></a>
+                                <a href="#" class="delete" id="<?= $row->id ?>"><i class="material-icons text-danger">delete</i></a>
                               </td>
                             </tr>
                             <?php } }else{ ?>
@@ -171,9 +162,6 @@
                     </div>
                     <div class="tab-pane" id="balster">
                       <a href="<?= base_url('sky-admin/products/bedding/add-product/balster') ?>" class="btn btn-info btn-round"><i class="material-icons">add</i></a>
-
-                      <a href="javascript:;" class="btn btn-success float-right"><i class="material-icons">get_app</i> Xls</a>
-                      <a href="javascript:;" class="btn btn-danger float-right"><i class="material-icons">get_app</i> Pdf</a>
                       <div class="table-responsive">
                         <table class="table table-hover display responsive nowrap" width="100%" id="balster-table">
                           <thead class="text-primary">
@@ -200,7 +188,7 @@
                               </td>
                               <td>
                                 <a href="<?= base_url('sky-admin/products/bedding/edit-product/'. $row->id .'') ?>"><i class="material-icons text-warning">edit</i></a>
-                                <a class="delete" id="<?= $row->id ?>"><i class="material-icons text-danger">delete</i></a>
+                                <a href="#" class="delete" id="<?= $row->id ?>"><i class="material-icons text-danger">delete</i></a>
                               </td>
                             </tr>
                             <?php } }else{ ?>
@@ -212,9 +200,6 @@
                     </div>
                     <div class="tab-pane" id="cushion">
                       <a href="<?= base_url('sky-admin/products/bedding/add-product/cushion') ?>" class="btn btn-info btn-round"><i class="material-icons">add</i></a>
-
-                      <a href="javascript:;" class="btn btn-success float-right"><i class="material-icons">get_app</i> Xls</a>
-                      <a href="javascript:;" class="btn btn-danger float-right"><i class="material-icons">get_app</i> Pdf</a>
                       <div class="table-responsive">
                         <table class="table table-hover display responsive nowrap" width="100%" id="cushion-table">
                           <thead class="text-primary">
@@ -241,7 +226,7 @@
                               </td>
                               <td>
                                 <a href="<?= base_url('sky-admin/products/bedding/edit-product/'. $row->id .'') ?>"><i class="material-icons text-warning">edit</i></a>
-                                <a class="delete" id="<?= $row->id ?>"><i class="material-icons text-danger">delete</i></a>
+                                <a href="#" class="delete" id="<?= $row->id ?>"><i class="material-icons text-danger">delete</i></a>
                               </td>
                             </tr>
                             <?php } }else{ ?>

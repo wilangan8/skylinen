@@ -38,9 +38,9 @@ class Bedding extends CI_Controller {
 			$no = $this->db->order_by('id','desc')->limit(1)->get('sky_prod_innerduvet')->row();
 			if($check > 0){
 				$newNo = substr($no->id,3)+1;
-				$id = 'id-'. sprintf("%04s", $newNo) .'';
+				$id = 'ID-'. sprintf("%04s", $newNo) .'';
 			}else{
-				$id = 'id-0001';
+				$id = 'ID-0001';
 			}
 
 			$newProduct = 'Inner Duvet';
@@ -49,9 +49,9 @@ class Bedding extends CI_Controller {
 			$no = $this->db->order_by('id','desc')->limit(1)->get('sky_prod_mattressprotector')->row();
 			if($check > 0){
 				$newNo = substr($no->id,3)+1;
-				$id = 'mp-'. sprintf("%04s", $newNo) .'';
+				$id = 'MP-'. sprintf("%04s", $newNo) .'';
 			}else{
-				$id = 'mp-0001';
+				$id = 'MP-0001';
 			}
 
 			$newProduct = 'Mattress Protector';
@@ -60,9 +60,9 @@ class Bedding extends CI_Controller {
 			$no = $this->db->order_by('id','desc')->limit(1)->get('sky_prod_pillow')->row();
 			if($check > 0){
 				$newNo = 	substr($no->id,3)+1;
-				$id = 'pl-'. sprintf("%04s", $newNo) .'';
+				$id = 'PL-'. sprintf("%04s", $newNo) .'';
 			}else{
-				$id = 'pl-0001';
+				$id = 'PL-0001';
 			}
 
 			$newProduct = 'Pillow';
@@ -71,9 +71,9 @@ class Bedding extends CI_Controller {
 			$no = $this->db->order_by('id','desc')->limit(1)->get('sky_prod_balster')->row();
 			if($check > 0){
 				$newNo = substr($no->id,3)+1;
-				$id = 'bs-'. sprintf("%04s", $newNo) .'';
+				$id = 'BS-'. sprintf("%04s", $newNo) .'';
 			}else{
-				$id = 'bs-0001';
+				$id = 'BS-0001';
 			}
 
 			$newProduct = 'Balster';
@@ -82,9 +82,9 @@ class Bedding extends CI_Controller {
 			$no = $this->db->order_by('id','desc')->limit(1)->get('sky_prod_cushion')->row();
 			if($check > 0){
 				$newNo = substr($no->id,3)+1;
-				$id = 'ch-'. sprintf("%04s", $newNo) .'';
+				$id = 'CH-'. sprintf("%04s", $newNo) .'';
 			}else{
-				$id = 'ch-0001';
+				$id = 'CH-0001';
 			}		
 
 			$newProduct = 'Cushion';
@@ -142,13 +142,13 @@ class Bedding extends CI_Controller {
 		$product_img_3 = $upload_data_3['file_name'];
 		$status = 'yes';
 
-		if(substr($id,0,2) == "id"){
+		if(substr($id,0,2) == "ID"){
 			$prod = "innerduvet";
-		}elseif(substr($id,0,2) == "mp"){
+		}elseif(substr($id,0,2) == "MP"){
 			$prod = "mattressprotector";
-		}elseif(substr($id,0,2) == "pl"){
+		}elseif(substr($id,0,2) == "PL"){
 			$prod = "pillow";
-		}elseif(substr($id,0,2) == "bs"){
+		}elseif(substr($id,0,2) == "BS"){
 			$prod = "balster";
 		}else{
 			$prod = "cushion";
@@ -177,16 +177,16 @@ class Bedding extends CI_Controller {
 	public function edit_product($id)
 	{
 
-		if(substr($id,0,2) == "id"){
+		if(substr($id,0,2) == "ID"){
 			$prod = "innerduvet";
 			$newProduct = "Inner Duvet";
-		}elseif(substr($id,0,2) == "mp"){
+		}elseif(substr($id,0,2) == "MP"){
 			$prod = "mattressprotector";
 			$newProduct = "Mattress Protector";
-		}elseif(substr($id,0,2) == "pl"){
+		}elseif(substr($id,0,2) == "PL"){
 			$prod = "pillow";
 			$newProduct = "Pillow";
-		}elseif(substr($id,0,2) == "bs"){
+		}elseif(substr($id,0,2) == "BS"){
 			$prod = "balster";
 			$newProduct = "Balster";
 		}else{
@@ -211,13 +211,13 @@ class Bedding extends CI_Controller {
 	public function update_product($id)
 	{
 
-		if(substr($id,0,2) == "id"){
+		if(substr($id,0,2) == "ID"){
 			$prod = "innerduvet";
-		}elseif(substr($id,0,2) == "mp"){
+		}elseif(substr($id,0,2) == "MP"){
 			$prod = "mattressprotector";
-		}elseif(substr($id,0,2) == "pl"){
+		}elseif(substr($id,0,2) == "PL"){
 			$prod = "pillow";
-		}elseif(substr($id,0,2) == "bs"){
+		}elseif(substr($id,0,2) == "BS"){
 			$prod = "balster";
 		}else{
 			$prod = "cushion";
@@ -297,13 +297,13 @@ class Bedding extends CI_Controller {
 
 		$id = $this->input->post('id');
 		
-		if(substr($id,0,2) == "id"){
+		if(substr($id,0,2) == "ID"){
 			$prod = "innerduvet";
-		}elseif(substr($id,0,2) == "mp"){
+		}elseif(substr($id,0,2) == "MP"){
 			$prod = "mattressprotector";
-		}elseif(substr($id,0,2) == "pl"){
+		}elseif(substr($id,0,2) == "PL"){
 			$prod = "pillow";
-		}elseif(substr($id,0,2) == "bs"){
+		}elseif(substr($id,0,2) == "BS"){
 			$prod = "balster";
 		}else{
 			$prod = "cushion";

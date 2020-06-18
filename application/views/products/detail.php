@@ -46,7 +46,7 @@
 
         </div>
 
-        <!-- <div class="product-options">
+        <div class="product-options">
             <div class="product-options-collaspe">
                 <div class="product-options-toggle" style="background-image: url(<?= base_url('assets/images/chevron_down.svg') ?>);">
                     <p>hide</p>
@@ -86,7 +86,7 @@
                     </button>
                 </div>
             </div>
-        </div> -->
+        </div>
     </div>
 
     <div class="product-details bg-xxlgrey" id="detail">
@@ -94,7 +94,7 @@
             <h2 class="section-title">Product Details</h2>
             <div class="product-details-container">
 
-               <div class="product-details-swatch ng-star-inserted">
+               <!-- <div class="product-details-swatch ng-star-inserted">
                     <a class="product-details-swatch-expand"></a>
                     <div class="slider-swatch slick-initialized slick-slider">
                         <div class="swatch-prev slick-arrow" style=""></div>
@@ -116,7 +116,7 @@
                         </div>
                         <div class="swatch-next slick-arrow" style=""></div>
                     </div>
-               </div>
+               </div> -->
 
                 <div class="product-details-material">
                     <div class="product-detail-scroll ng-star-inserted">

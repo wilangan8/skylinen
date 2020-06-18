@@ -22,7 +22,7 @@ class Kitchenanddining extends CI_Controller {
 	{
 		$where = array('id' => $id);
 		$data = array(
-			'detail' => $this->m_kitchenanddining-> detail_product($where,'sky_prod_kitchenanddining')->row(),
+			'detail' => $this->m_kitchenanddining->detail_product($where,'sky_prod_kitchenanddining')->row(),
 			'prod' => '',
 		);
 

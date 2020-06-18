@@ -24,9 +24,6 @@
 
                     <div class="tab-pane active" id="kitchenanddining">
                     <a href="<?= base_url('sky-admin/products/kitchen-and-dining/add-product') ?>" class="btn btn-info btn-round"><i class="material-icons">add</i></a>
-
-                      <a href="javascript:;" class="btn btn-success float-right"><i class="material-icons">get_app</i> Xls</a>
-                      <a href="javascript:;" class="btn btn-danger float-right"><i class="material-icons">get_app</i> Pdf</a>
                       <div class="table-responsive">
                         <table class="table table-hover display responsive nowrap" width="100%" id="kitchenanddining-table">
                           <thead class="text-primary">

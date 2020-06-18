@@ -60,15 +60,15 @@ class Bedlinen extends CI_Controller {
 
 	public function detail($id)
 	{
-		if(substr($id,0,2) == "sh"){
+		if(substr($id,0,2) == "SH"){
 			$prod = "sheeting";
-		}elseif(substr($id,0,2) == "fs"){
+		}elseif(substr($id,0,2) == "FS"){
 			$prod = "flatsheet";
-		}elseif(substr($id,0,3) == "fts"){
+		}elseif(substr($id,0,3) == "FTS"){
 			$prod = "fittedsheet";
-		}elseif(substr($id,0,2) == "pc"){
+		}elseif(substr($id,0,2) == "PC"){
 			$prod = "pillowcase";
-		}elseif(substr($id,0,2) == "bc"){
+		}elseif(substr($id,0,2) == "BC"){
 			$prod = "balstercase";
 		}else{
 			$prod = "duvetcover";

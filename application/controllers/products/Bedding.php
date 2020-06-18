@@ -52,13 +52,13 @@ class Bedding extends CI_Controller {
     
 	public function detail($id)
 	{
-		if(substr($id,0,2) == "id"){
+		if(substr($id,0,2) == "ID"){
 			$prod = "innerduvet";
-		}elseif(substr($id,0,2) == "mp"){
+		}elseif(substr($id,0,2) == "MP"){
 			$prod = "mattressprotector";
-		}elseif(substr($id,0,2) == "pl"){
+		}elseif(substr($id,0,2) == "PL"){
 			$prod = "pillow";
-		}elseif(substr($id,0,2) == "bs"){
+		}elseif(substr($id,0,2) == "BS"){
 			$prod = "balster";
 		}else{
 			$prod = "cushion";

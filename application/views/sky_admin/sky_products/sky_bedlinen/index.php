@@ -54,9 +54,6 @@
 
                     <div class="tab-pane active show" id="sheeting">
                       <a href="<?= base_url('sky-admin/products/bedlinen/add-product/sheeting') ?>" class="btn btn-info btn-round"><i class="material-icons">add</i></a>
-
-                      <a href="javascript:;" class="btn btn-success float-right"><i class="material-icons">get_app</i> Xls</a>
-                      <a href="javascript:;" class="btn btn-danger float-right"><i class="material-icons">get_app</i> Pdf</a>
                       <div class="table-responsive">
                         <table class="table table-hover display responsive nowrap" width="100%" id="sheeting-table">
                           <thead class="text-primary">
@@ -95,9 +92,6 @@
                     </div>
                     <div class="tab-pane" id="flatsheet">
                       <a href="<?= base_url('sky-admin/products/bedlinen/add-product/flatsheet') ?>" class="btn btn-info btn-round"><i class="material-icons">add</i></a>
-
-                      <a href="javascript:;" class="btn btn-success float-right"><i class="material-icons">get_app</i> Xls</a>
-                      <a href="javascript:;" class="btn btn-danger float-right"><i class="material-icons">get_app</i> Pdf</a>
                       <div class="table-responsive">
                         <table class="table table-hover display responsive nowrap" width="100%" id="flatsheet-table">
                           <thead class="text-primary">
@@ -136,9 +130,6 @@
                     </div>
                     <div class="tab-pane" id="fittedsheet">
                       <a href="<?= base_url('sky-admin/products/bedlinen/add-product/fittedsheet') ?>" class="btn btn-info btn-round"><i class="material-icons">add</i></a>
-
-                      <a href="javascript:;" class="btn btn-success float-right"><i class="material-icons">get_app</i> Xls</a>
-                      <a href="javascript:;" class="btn btn-danger float-right"><i class="material-icons">get_app</i> Pdf</a>
                       <div class="table-responsive">
                         <table class="table table-hover display responsive nowrap" width="100%" id="fittedsheet-table">
                           <thead class="text-primary">
@@ -177,9 +168,6 @@
                     </div>
                     <div class="tab-pane" id="pillowcase">
                       <a href="<?= base_url('sky-admin/products/bedlinen/add-product/pillowcase') ?>" class="btn btn-info btn-round"><i class="material-icons">add</i></a>
-
-                      <a href="javascript:;" class="btn btn-success float-right"><i class="material-icons">get_app</i> Xls</a>
-                      <a href="javascript:;" class="btn btn-danger float-right"><i class="material-icons">get_app</i> Pdf</a>
                       <div class="table-responsive">
                         <table class="table table-hover display responsive nowrap" width="100%" id="pillowcase-table">
                           <thead class="text-primary">
@@ -218,9 +206,6 @@
                     </div>
                     <div class="tab-pane" id="balstercase">
                       <a href="<?= base_url('sky-admin/products/bedlinen/add-product/balstercase') ?>" class="btn btn-info btn-round"><i class="material-icons">add</i></a>
-
-                      <a href="javascript:;" class="btn btn-success float-right"><i class="material-icons">get_app</i> Xls</a>
-                      <a href="javascript:;" class="btn btn-danger float-right"><i class="material-icons">get_app</i> Pdf</a>
                       <div class="table-responsive">
                         <table class="table table-hover display responsive nowrap" width="100%" id="balstercase-table">
                           <thead class="text-primary">
@@ -259,9 +244,6 @@
                     </div>
                     <div class="tab-pane" id="duvetcover">
                       <a href="<?= base_url('sky-admin/products/bedlinen/add-product/duvetcover') ?>" class="btn btn-info btn-round"><i class="material-icons">add</i></a>
-
-                      <a href="javascript:;" class="btn btn-success float-right"><i class="material-icons">get_app</i> Xls</a>
-                      <a href="javascript:;" class="btn btn-danger float-right"><i class="material-icons">get_app</i> Pdf</a>
                       <div class="table-responsive">
                         <table class="table table-hover display responsive nowrap" width="100%" id="duvetcover-table">
                           <thead class="text-primary">

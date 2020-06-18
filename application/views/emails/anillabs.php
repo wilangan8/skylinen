@@ -645,9 +645,9 @@
                                 </tr>
                                 <?php foreach ($this->cart->contents() as $items): ?>
                                 <tr>
-                                  <td width="10%" class="purchase_item align-center"><span class="f-fallback"><?= $items['id'] ?></span></td>
+                                  <td width="15%" class="purchase_item align-center"><span class="f-fallback"><?= $items['id'] ?></span></td>
                                   <td width="40%" class="purchase_item align-center"><span class="f-fallback"><?= $items['name'] ?></span></td>
-                                  <td width="40%" class="purchase_item align-center"><span class="f-fallback"><img src="<?= $items['img'] ?>" width="150"></span></td>
+                                  <td width="35%" class="purchase_item align-center"><span class="f-fallback"><img src="<?= $items['img'] ?>" width="150"></span></td>
                                   <td width="10%" class="purchase_item align-center"><span class="f-fallback"><?= $items['qty'] ?></span></td>
                                 </tr>
                                 <?php endforeach; ?>

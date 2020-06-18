@@ -62,6 +62,13 @@ class Send_email extends CI_Controller {
         // Tampilkan pesan sukses atau error
         if(count($this->cart->contents()) > 0){
             if ($this->email->send()) {
+
+                $products = array();
+                foreach ($this->cart->contents() as $v_products) {
+                    array_push($products, $v_products['id']);
+                }
+                $v_products = implode(",", $products);
+
                 $data_cust = array(
                     'invoice_id' => $this->input->post('id'),
                     'email' => $this->input->post('email'),
@@ -74,9 +81,12 @@ class Send_email extends CI_Controller {
                     'city' => $this->input->post('city'),
                     'state' => $this->input->post('state'),
                     'zip' => $this->input->post('zip'),
+                    'products' => $v_products,
                     'status' => 'waiting'
                 );
                 $insert = $this->m_customer->create($data_cust,'sky_customer');
+
+            
 
                 $this->cart->destroy();
                 
@@ -122,17 +132,17 @@ class Send_email extends CI_Controller {
     }
     public function view() {
         $data = array(
-            'id' => $this->input->post('id'),
-            'email' => $this->input->post('email'),
-            'firstname'=> $this->input->post('firstname'),
-            'lastname' => $this->input->post('lastname'),
-            'company' => $this->input->post('company'),
-            'phone_number' => $this->input->post('phone_number'),
-            'wa' => $this->input->post('wa'),
-            'address' => $this->input->post('address'),
-            'city' => $this->input->post('city'),
-            'state' => $this->input->post('state'),
-            'zip' => $this->input->post('zip'),
+            'id' => 'SH-0001',
+            'email' => 'chandramaulanah@gmail.com',
+            'firstname'=> 'Chandra',
+            'lastname' => 'Maulana',
+            'company' => '-',
+            'phone_number' => '+62 123456789',
+            'wa' => '+62 123456789',
+            'address' => '+62 123456789123456789123456789123456789123456789123456789123456789123456789123456789123456789123456789123456789123456789123456789123456789123456789123456789123456789123456789123456789123456789123456789123456789123456789123456789',
+            'city' => 'Bandung',
+            'state' => 'Indonesia',
+            'zip' => '410231',
         );
         
         $this->load->view('emails/anillabs',$data);

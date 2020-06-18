@@ -5,8 +5,8 @@
           <div class="row slider-text justify-content-left align-items-center" data-scrollax-parent="true">
 
             <div class="col-md-6 offset-md-3 text-center welcome-banner animated fadeInUpBig">
-              <h1 class="animated fadeInUpBig d_01">WELCOME!</h1>
-              <p class="animated fadeInUpBig d_02">Sky Linen - Hospitality Linen Supplier</p>
+              <h1 class="animated fadeInUpBig">WELCOME!</h1>
+              <p class="animated fadeInUpBig">Sky Linen - Hospitality Linen Supplier</p>
             </div>
 
           </div>
@@ -19,8 +19,8 @@
 
           
             <div class="col-md-6 offset-md-3 text-center welcome-banner animated fadeInUpBig">
-              <h1 class="animated fadeInUpBig d_01">Selamat Datang</h1>
-              <p class="animated fadeInUpBig d_02">Sky Linen - Hospitality Linen Supplier</p>
+              <h1 class="animated fadeInUpBig">Selamat Datang</h1>
+              <p class="animated fadeInUpBig">Sky Linen - Hospitality Linen Supplier</p>
             </div>
 
           </div>

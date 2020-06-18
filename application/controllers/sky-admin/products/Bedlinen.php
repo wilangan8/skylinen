@@ -40,9 +40,9 @@ class Bedlinen extends CI_Controller {
 			$no = $this->db->order_by('id','desc')->limit(1)->get('sky_prod_sheeting')->row();
 			if($check > 0){
 				$newNo = substr($no->id,3)+1;
-				$id = 'sh-'. sprintf("%04s", $newNo) .'';
+				$id = 'SH-'. sprintf("%04s", $newNo) .'';
 			}else{
-				$id = 'sh-0001';
+				$id = 'SH-0001';
 			}
 
 			$newProduct = 'Sheeting';
@@ -51,9 +51,9 @@ class Bedlinen extends CI_Controller {
 			$no = $this->db->order_by('id','desc')->limit(1)->get('sky_prod_flatsheet')->row();
 			if($check > 0){
 				$newNo = substr($no->id,3)+1;
-				$id = 'fs-'. sprintf("%04s", $newNo) .'';
+				$id = 'FS-'. sprintf("%04s", $newNo) .'';
 			}else{
-				$id = 'fs-0001';
+				$id = 'FS-0001';
 			}
 
 			$newProduct = 'Flat Sheet';
@@ -61,9 +61,9 @@ class Bedlinen extends CI_Controller {
 			$check = $this->db->order_by('id','desc')->limit(1)->get('sky_prod_fittedsheet')->num_rows();
 			$no = $this->db->order_by('id','desc')->limit(1)->get('sky_prod_fittedsheet')->row();			if($check > 0){
 				$newNo = substr($no->id,4)+1;
-				$id = 'fts-'. sprintf("%04s", $newNo) .'';
+				$id = 'FTS-'. sprintf("%04s", $newNo) .'';
 			}else{
-				$id = 'fts-0001';
+				$id = 'FTS-0001';
 			}
 
 			$newProduct = 'Fitted Sheet';
@@ -72,9 +72,9 @@ class Bedlinen extends CI_Controller {
 			$no = $this->db->order_by('id','desc')->limit(1)->get('sky_prod_pillowcase')->row();
 			if($check > 0){
 				$newNo = substr($no->id,3)+1;
-				$id = 'pc-'. sprintf("%04s", $newNo) .'';
+				$id = 'PC-'. sprintf("%04s", $newNo) .'';
 			}else{
-				$id = 'pc-0001';
+				$id = 'PC-0001';
 			}
 
 			$newProduct = 'Pillow Case';
@@ -83,9 +83,9 @@ class Bedlinen extends CI_Controller {
 			$no = $this->db->order_by('id','desc')->limit(1)->get('sky_prod_balstercase')->row();
 			if($check > 0){
 				$newNo = substr($no->id,3)+1;
-				$id = 'bc-'. sprintf("%04s", $newNo) .'';
+				$id = 'BC-'. sprintf("%04s", $newNo) .'';
 			}else{
-				$id = 'bc-0001';
+				$id = 'BC-0001';
 			}
 
 			$newProduct = 'Balster Case';
@@ -94,9 +94,9 @@ class Bedlinen extends CI_Controller {
 			$no = $this->db->order_by('id','desc')->limit(1)->get('sky_prod_duvetcover')->row();
 			if($check > 0){
 				$newNo = substr($no->id,3)+1;
-				$id = 'dc-'. sprintf("%04s", $newNo) .'';
+				$id = 'DC-'. sprintf("%04s", $newNo) .'';
 			}else{
-				$id = 'dc-0001';
+				$id = 'DC-0001';
 			}
 
 			$newProduct = 'Duvet Cover';
@@ -154,15 +154,15 @@ class Bedlinen extends CI_Controller {
 		$product_img_3 = $upload_data_3['file_name'];
 		$status = 'yes';
 
-		if(substr($id,0,2) == "sh"){
+		if(substr($id,0,2) == "SH"){
 			$prod = "sheeting";
-		}elseif(substr($id,0,2) == "fs"){
+		}elseif(substr($id,0,2) == "FS"){
 			$prod = "flatsheet";
-		}elseif(substr($id,0,3) == "fts"){
+		}elseif(substr($id,0,3) == "FTS"){
 			$prod = "fittedsheet";
-		}elseif(substr($id,0,2) == "pc"){
+		}elseif(substr($id,0,2) == "PC"){
 			$prod = "pillowcase";
-		}elseif(substr($id,0,2) == "bc"){
+		}elseif(substr($id,0,2) == "BC"){
 			$prod = "balstercase";
 		}else{
 			$prod = "duvetcover";
@@ -191,19 +191,19 @@ class Bedlinen extends CI_Controller {
 	public function edit_product($id)
 	{
 
-		if(substr($id,0,2) == "sh"){
+		if(substr($id,0,2) == "SH"){
 			$prod = "sheeting";
 			$newProduct = "Sheeting";
-		}elseif(substr($id,0,2) == "fs"){
+		}elseif(substr($id,0,2) == "FS"){
 			$prod = "flatsheet";
 			$newProduct = "Flat Sheet";
-		}elseif(substr($id,0,3) == "fts"){
+		}elseif(substr($id,0,3) == "FTS"){
 			$prod = "fittedsheet";
 			$newProduct = "Fitted Sheet";
-		}elseif(substr($id,0,2) == "pc"){
+		}elseif(substr($id,0,2) == "PC"){
 			$prod = "pillowcase";
 			$newProduct = "Pillow Case";
-		}elseif(substr($id,0,2) == "bc"){
+		}elseif(substr($id,0,2) == "BC"){
 			$prod = "balstercase";
 			$newProduct = "Balster Case";
 		}else{
@@ -228,15 +228,15 @@ class Bedlinen extends CI_Controller {
 	public function update_product($id)
 	{
 
-		if(substr($id,0,2) == "sh"){
+		if(substr($id,0,2) == "SH"){
 			$prod = "sheeting";
-		}elseif(substr($id,0,2) == "fs"){
+		}elseif(substr($id,0,2) == "FS"){
 			$prod = "flatsheet";
-		}elseif(substr($id,0,3) == "fts"){
+		}elseif(substr($id,0,3) == "FTS"){
 			$prod = "fittedsheet";
-		}elseif(substr($id,0,2) == "pc"){
+		}elseif(substr($id,0,2) == "PC"){
 			$prod = "pillowcase";
-		}elseif(substr($id,0,2) == "bc"){
+		}elseif(substr($id,0,2) == "BC"){
 			$prod = "balstercase";
 		}else{
 			$prod = "duvetcover";
@@ -316,15 +316,15 @@ class Bedlinen extends CI_Controller {
 
 		$id = $this->input->post('id');
 		
-		if(substr($id,0,2) == "sh"){
+		if(substr($id,0,2) == "SH"){
 			$prod = "sheeting";
-		}elseif(substr($id,0,2) == "fs"){
+		}elseif(substr($id,0,2) == "FS"){
 			$prod = "flatsheet";
-		}elseif(substr($id,0,3) == "fts"){
+		}elseif(substr($id,0,3) == "FTS"){
 			$prod = "fittedsheet";
-		}elseif(substr($id,0,2) == "pc"){
+		}elseif(substr($id,0,2) == "PC"){
 			$prod = "pillowcase";
-		}elseif(substr($id,0,2) == "bc"){
+		}elseif(substr($id,0,2) == "BC"){
 			$prod = "balstercase";
 		}else{
 			$prod = "duvetcover";

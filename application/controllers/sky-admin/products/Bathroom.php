@@ -37,9 +37,9 @@ class Bathroom extends CI_Controller {
 			$no = $this->db->order_by('id','desc')->limit(1)->get('sky_prod_bathtowel')->row();
 			if($check > 0){
 				$newNo = substr($no->id,3)+1;
-				$id = 'bt-'. sprintf("%04s", $newNo) .'';
+				$id = 'BT-'. sprintf("%04s", $newNo) .'';
 			}else{
-				$id = 'bt-0001';
+				$id = 'BT-0001';
 			}
 			
 
@@ -49,9 +49,9 @@ class Bathroom extends CI_Controller {
 			$no = $this->db->order_by('id','desc')->limit(1)->get('sky_prod_handtowel')->row();
 			if($check > 0){
 				$newNo = substr($no->id,3)+1;
-				$id = 'ht-'. sprintf("%04s", $newNo) .'';
+				$id = 'HT-'. sprintf("%04s", $newNo) .'';
 			}else{
-				$id = 'ht-0001';
+				$id = 'HT-0001';
 			}
 			
 
@@ -61,9 +61,9 @@ class Bathroom extends CI_Controller {
 			$no = $this->db->order_by('id','desc')->limit(1)->get('sky_prod_facetowel')->row();
 			if($check > 0){
 				$newNo = substr($no->id,3)+1;
-				$id = 'ft-'. sprintf("%04s", $newNo) .'';
+				$id = 'FT-'. sprintf("%04s", $newNo) .'';
 			}else{
-				$id = 'ft-0001';
+				$id = 'FT-0001';
 			}
 			
 
@@ -73,9 +73,9 @@ class Bathroom extends CI_Controller {
 			$no = $this->db->order_by('id','desc')->limit(1)->get('sky_prod_bathmat')->row();
 			if($check > 0){
 				$newNo = substr($no->id,3)+1;
-				$id = 'bm-'. sprintf("%04s", $newNo) .'';
+				$id = 'BM-'. sprintf("%04s", $newNo) .'';
 			}else{
-				$id = 'bm-0001';
+				$id = 'BM-0001';
 			}
 			
 
@@ -134,11 +134,11 @@ class Bathroom extends CI_Controller {
 		$product_img_3 = $upload_data_3['file_name'];
 		$status = 'yes';
 
-		if(substr($id,0,2) == "bt"){
+		if(substr($id,0,2) == "BT"){
 			$prod = "bathtowel";
-		}elseif(substr($id,0,2) == "ht"){
+		}elseif(substr($id,0,2) == "HT"){
 			$prod = "handtowel";
-		}elseif(substr($id,0,2) == "ft"){
+		}elseif(substr($id,0,2) == "FT"){
 			$prod = "facetowel";
 		}else{
 			$prod = "bathmat";
@@ -167,13 +167,13 @@ class Bathroom extends CI_Controller {
 	public function edit_product($id)
 	{
 
-		if(substr($id,0,2) == "bt"){
+		if(substr($id,0,2) == "BT"){
 			$prod = "bathtowel";
 			$newProduct = "Bath Towel";
-		}elseif(substr($id,0,2) == "ht"){
+		}elseif(substr($id,0,2) == "HT"){
 			$prod = "handtowel";
 			$newProduct = "Hand Towel";
-		}elseif(substr($id,0,2) == "ft"){
+		}elseif(substr($id,0,2) == "FT"){
 			$prod = "facetowel";
 			$newProduct = "Face Towel";
 		}else{
@@ -198,11 +198,11 @@ class Bathroom extends CI_Controller {
 	public function update_product($id)
 	{
 
-		if(substr($id,0,2) == "bt"){
+		if(substr($id,0,2) == "BT"){
 			$prod = "bathtowel";
-		}elseif(substr($id,0,2) == "ht"){
+		}elseif(substr($id,0,2) == "HT"){
 			$prod = "handtowel";
-		}elseif(substr($id,0,2) == "ft"){
+		}elseif(substr($id,0,2) == "FT"){
 			$prod = "facetowel";
 		}else{
 			$prod = "bathmat";
@@ -282,11 +282,11 @@ class Bathroom extends CI_Controller {
 
 		$id = $this->input->post('id');
 
-		if(substr($id,0,2) == "bt"){
+		if(substr($id,0,2) == "BT"){
 			$prod = "bathtowel";
-		}elseif(substr($id,0,2) == "ht"){
+		}elseif(substr($id,0,2) == "HT"){
 			$prod = "handtowel";
-		}elseif(substr($id,0,2) == "ft"){
+		}elseif(substr($id,0,2) == "FT"){
 			$prod = "facetowel";
 		}else{
 			$prod = "bathmat";
